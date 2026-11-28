@@ -8,20 +8,44 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!supabaseConfigured) { setLoading(false); return undefined; }
+    if (!supabaseConfigured) {
+      setLoading(false);
+      return undefined;
+    }
+
     let active = true;
-    supabase.auth.getSession().then(({ data, error }) => {
-      if (active) {
+    let authEventReceived = false;
+
+    // Subscribe before reading the stored session. This prevents a late
+    // getSession() response from overwriting a newer SIGNED_IN event.
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (_event, nextSession) => {
+        authEventReceived = true;
+        if (active) {
+          setSession(nextSession);
+          setLoading(false);
+        }
+      },
+    );
+
+    supabase.auth.getSession()
+      .then(({ data, error }) => {
+        if (!active || authEventReceived) return;
         if (error) console.error('Unable to restore session:', error.message);
         setSession(data?.session ?? null);
         setLoading(false);
-      }
-    });
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, nextSession) => {
-      setSession(nextSession);
-      setLoading(false);
-    });
-    return () => { active = false; subscription.unsubscribe(); };
+      })
+      .catch((error) => {
+        if (!active || authEventReceived) return;
+        console.error('Unable to restore session:', error);
+        setSession(null);
+        setLoading(false);
+      });
+
+    return () => {
+      active = false;
+      subscription.unsubscribe();
+    };
   }, []);
 
   const value = {
@@ -29,11 +53,15 @@ export function AuthProvider({ children }) {
     user: session?.user ?? null,
     loading,
     configured: supabaseConfigured,
+    // Apply the session returned directly by sign-in/sign-up immediately;
+    // the auth-state listener will keep it synchronized afterward.
+    acceptSession: (nextSession) => setSession(nextSession),
     signOut: async () => {
       if (!supabase) return { error: new Error('Supabase is not configured.') };
       return supabase.auth.signOut();
     },
   };
+
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
