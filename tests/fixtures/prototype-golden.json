@@ -1,0 +1,2687 @@
+{
+ "frozenNow": "2026-11-25T10:00:00Z",
+ "today": "2026-11-25",
+ "timeZone": "UTC",
+ "interests": [
+  "ai",
+  "web",
+  "sec",
+  "hw",
+  "civil",
+  "design",
+  "data"
+ ],
+ "catalogue": {
+  "roadmapIds": [
+   "python",
+   "dsa",
+   "dbms",
+   "frontend",
+   "backend",
+   "ml",
+   "genai",
+   "cyber",
+   "devops",
+   "iot",
+   "control",
+   "bim",
+   "uiux"
+  ],
+  "topicIds": [
+   "python-1",
+   "python-2",
+   "python-3",
+   "python-4",
+   "python-5",
+   "python-6",
+   "python-7",
+   "python-8",
+   "python-9",
+   "python-10",
+   "dsa-1",
+   "dsa-2",
+   "dsa-3",
+   "dsa-4",
+   "dsa-5",
+   "dsa-6",
+   "dsa-7",
+   "dsa-8",
+   "dsa-9",
+   "dsa-10",
+   "dsa-11",
+   "dsa-12",
+   "dbms-1",
+   "dbms-2",
+   "dbms-3",
+   "dbms-4",
+   "dbms-5",
+   "dbms-6",
+   "dbms-7",
+   "dbms-8",
+   "dbms-9",
+   "dbms-10",
+   "frontend-1",
+   "frontend-2",
+   "frontend-3",
+   "frontend-4",
+   "frontend-5",
+   "frontend-6",
+   "frontend-7",
+   "frontend-8",
+   "frontend-9",
+   "frontend-10",
+   "backend-1",
+   "backend-2",
+   "backend-3",
+   "backend-4",
+   "backend-5",
+   "backend-6",
+   "backend-7",
+   "backend-8",
+   "backend-9",
+   "backend-10",
+   "ml-1",
+   "ml-2",
+   "ml-3",
+   "ml-4",
+   "ml-5",
+   "ml-6",
+   "ml-7",
+   "ml-8",
+   "ml-9",
+   "ml-10",
+   "genai-1",
+   "genai-2",
+   "genai-3",
+   "genai-4",
+   "genai-5",
+   "genai-6",
+   "genai-7",
+   "genai-8",
+   "genai-9",
+   "genai-10",
+   "cyber-1",
+   "cyber-2",
+   "cyber-3",
+   "cyber-4",
+   "cyber-5",
+   "cyber-6",
+   "cyber-7",
+   "cyber-8",
+   "cyber-9",
+   "cyber-10",
+   "devops-1",
+   "devops-2",
+   "devops-3",
+   "devops-4",
+   "devops-5",
+   "devops-6",
+   "devops-7",
+   "devops-8",
+   "devops-9",
+   "devops-10",
+   "iot-1",
+   "iot-2",
+   "iot-3",
+   "iot-4",
+   "iot-5",
+   "iot-6",
+   "iot-7",
+   "iot-8",
+   "iot-9",
+   "iot-10",
+   "control-1",
+   "control-2",
+   "control-3",
+   "control-4",
+   "control-5",
+   "control-6",
+   "control-7",
+   "control-8",
+   "control-9",
+   "control-10",
+   "bim-1",
+   "bim-2",
+   "bim-3",
+   "bim-4",
+   "bim-5",
+   "bim-6",
+   "bim-7",
+   "bim-8",
+   "bim-9",
+   "bim-10",
+   "uiux-1",
+   "uiux-2",
+   "uiux-3",
+   "uiux-4",
+   "uiux-5",
+   "uiux-6",
+   "uiux-7",
+   "uiux-8",
+   "uiux-9",
+   "uiux-10"
+  ],
+  "ideaIds": [
+   "career-gap",
+   "campus-bot",
+   "phish-edu",
+   "spaced-rep",
+   "crop-advisor",
+   "smart-water",
+   "a11y-nav",
+   "gh-health"
+  ]
+ },
+ "scenarios": {
+  "empty": {
+   "input": {
+    "done": [],
+    "log": {},
+    "focus": []
+   },
+   "prototype": {
+    "xp": 0,
+    "rankName": "Cadet",
+    "xpToNext": 100,
+    "wprog": {
+     "p": 0,
+     "dn": 0,
+     "tn": 132
+    },
+    "streak": 0,
+    "focusHours": 0,
+    "roadmaps": [
+     {
+      "id": "python",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "dsa",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "dbms",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "frontend",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "backend",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "ml",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "genai",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "cyber",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "devops",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "iot",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "control",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "bim",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "uiux",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     }
+    ],
+    "build": {
+     "career-gap": {
+      "d": 0,
+      "t": 52,
+      "pct": 0
+     },
+     "campus-bot": {
+      "d": 0,
+      "t": 40,
+      "pct": 0
+     },
+     "phish-edu": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     },
+     "spaced-rep": {
+      "d": 0,
+      "t": 30,
+      "pct": 0
+     },
+     "crop-advisor": {
+      "d": 0,
+      "t": 30,
+      "pct": 0
+     },
+     "smart-water": {
+      "d": 0,
+      "t": 30,
+      "pct": 0
+     },
+     "a11y-nav": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     },
+     "gh-health": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     }
+    },
+    "byInterest": {
+     "ai": {
+      "rec": [
+       "python",
+       "dsa",
+       "ml"
+      ],
+      "ranked": [
+       "career-gap",
+       "campus-bot",
+       "crop-advisor",
+       "phish-edu",
+       "spaced-rep",
+       "smart-water",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.3,
+       "campus-bot": 0.3,
+       "phish-edu": 0,
+       "spaced-rep": 0,
+       "crop-advisor": 0.3,
+       "smart-water": 0,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "web": {
+      "rec": [
+       "python",
+       "frontend",
+       "uiux"
+      ],
+      "ranked": [
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "a11y-nav",
+       "gh-health",
+       "career-gap",
+       "crop-advisor",
+       "smart-water"
+      ],
+      "scores": {
+       "career-gap": 0,
+       "campus-bot": 0.3,
+       "phish-edu": 0.3,
+       "spaced-rep": 0.3,
+       "crop-advisor": 0,
+       "smart-water": 0,
+       "a11y-nav": 0.3,
+       "gh-health": 0.3
+      }
+     },
+     "sec": {
+      "rec": [
+       "cyber",
+       "dsa",
+       "devops"
+      ],
+      "ranked": [
+       "phish-edu",
+       "career-gap",
+       "campus-bot",
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0,
+       "campus-bot": 0,
+       "phish-edu": 0.3,
+       "spaced-rep": 0,
+       "crop-advisor": 0,
+       "smart-water": 0,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "hw": {
+      "rec": [
+       "control",
+       "iot"
+      ],
+      "ranked": [
+       "smart-water",
+       "career-gap",
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "crop-advisor",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0,
+       "campus-bot": 0,
+       "phish-edu": 0,
+       "spaced-rep": 0,
+       "crop-advisor": 0,
+       "smart-water": 0.3,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "civil": {
+      "rec": [
+       "bim"
+      ],
+      "ranked": [
+       "career-gap",
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0,
+       "campus-bot": 0,
+       "phish-edu": 0,
+       "spaced-rep": 0,
+       "crop-advisor": 0,
+       "smart-water": 0,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "design": {
+      "rec": [
+       "frontend",
+       "uiux"
+      ],
+      "ranked": [
+       "spaced-rep",
+       "a11y-nav",
+       "career-gap",
+       "campus-bot",
+       "phish-edu",
+       "crop-advisor",
+       "smart-water",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0,
+       "campus-bot": 0,
+       "phish-edu": 0,
+       "spaced-rep": 0.3,
+       "crop-advisor": 0,
+       "smart-water": 0,
+       "a11y-nav": 0.3,
+       "gh-health": 0
+      }
+     },
+     "data": {
+      "rec": [
+       "python",
+       "dsa",
+       "dbms"
+      ],
+      "ranked": [
+       "career-gap",
+       "crop-advisor",
+       "smart-water",
+       "gh-health",
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "a11y-nav"
+      ],
+      "scores": {
+       "career-gap": 0.3,
+       "campus-bot": 0,
+       "phish-edu": 0,
+       "spaced-rep": 0,
+       "crop-advisor": 0.3,
+       "smart-water": 0.3,
+       "a11y-nav": 0,
+       "gh-health": 0.3
+      }
+     }
+    }
+   }
+  },
+  "starter": {
+   "input": {
+    "done": [
+     "python-1",
+     "python-2"
+    ],
+    "log": {
+     "python-1": "2026-11-25",
+     "python-2": "2026-11-25"
+    },
+    "focus": []
+   },
+   "prototype": {
+    "xp": 20,
+    "rankName": "Cadet",
+    "xpToNext": 80,
+    "wprog": {
+     "p": 1,
+     "dn": 2,
+     "tn": 132
+    },
+    "streak": 1,
+    "focusHours": 0,
+    "roadmaps": [
+     {
+      "id": "python",
+      "pct": 20,
+      "done": 2,
+      "next": 2
+     },
+     {
+      "id": "dsa",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "dbms",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "frontend",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "backend",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "ml",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "genai",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "cyber",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "devops",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "iot",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "control",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "bim",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "uiux",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     }
+    ],
+    "build": {
+     "career-gap": {
+      "d": 2,
+      "t": 52,
+      "pct": 4
+     },
+     "campus-bot": {
+      "d": 2,
+      "t": 40,
+      "pct": 5
+     },
+     "phish-edu": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     },
+     "spaced-rep": {
+      "d": 2,
+      "t": 30,
+      "pct": 7
+     },
+     "crop-advisor": {
+      "d": 2,
+      "t": 30,
+      "pct": 7
+     },
+     "smart-water": {
+      "d": 2,
+      "t": 30,
+      "pct": 7
+     },
+     "a11y-nav": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     },
+     "gh-health": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     }
+    },
+    "byInterest": {
+     "ai": {
+      "rec": [
+       "python",
+       "dsa",
+       "ml"
+      ],
+      "ranked": [
+       "crop-advisor",
+       "campus-bot",
+       "career-gap",
+       "spaced-rep",
+       "smart-water",
+       "phish-edu",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.32799999999999996,
+       "campus-bot": 0.33499999999999996,
+       "phish-edu": 0,
+       "spaced-rep": 0.04666666666666666,
+       "crop-advisor": 0.3466666666666667,
+       "smart-water": 0.04666666666666666,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "web": {
+      "rec": [
+       "python",
+       "frontend",
+       "uiux"
+      ],
+      "ranked": [
+       "spaced-rep",
+       "campus-bot",
+       "phish-edu",
+       "a11y-nav",
+       "gh-health",
+       "crop-advisor",
+       "smart-water",
+       "career-gap"
+      ],
+      "scores": {
+       "career-gap": 0.027999999999999997,
+       "campus-bot": 0.33499999999999996,
+       "phish-edu": 0.3,
+       "spaced-rep": 0.3466666666666667,
+       "crop-advisor": 0.04666666666666666,
+       "smart-water": 0.04666666666666666,
+       "a11y-nav": 0.3,
+       "gh-health": 0.3
+      }
+     },
+     "sec": {
+      "rec": [
+       "cyber",
+       "dsa",
+       "devops"
+      ],
+      "ranked": [
+       "phish-edu",
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "campus-bot",
+       "career-gap",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.027999999999999997,
+       "campus-bot": 0.034999999999999996,
+       "phish-edu": 0.3,
+       "spaced-rep": 0.04666666666666666,
+       "crop-advisor": 0.04666666666666666,
+       "smart-water": 0.04666666666666666,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "hw": {
+      "rec": [
+       "control",
+       "iot"
+      ],
+      "ranked": [
+       "smart-water",
+       "spaced-rep",
+       "crop-advisor",
+       "campus-bot",
+       "career-gap",
+       "phish-edu",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.027999999999999997,
+       "campus-bot": 0.034999999999999996,
+       "phish-edu": 0,
+       "spaced-rep": 0.04666666666666666,
+       "crop-advisor": 0.04666666666666666,
+       "smart-water": 0.3466666666666667,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "civil": {
+      "rec": [
+       "bim"
+      ],
+      "ranked": [
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "campus-bot",
+       "career-gap",
+       "phish-edu",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.027999999999999997,
+       "campus-bot": 0.034999999999999996,
+       "phish-edu": 0,
+       "spaced-rep": 0.04666666666666666,
+       "crop-advisor": 0.04666666666666666,
+       "smart-water": 0.04666666666666666,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "design": {
+      "rec": [
+       "frontend",
+       "uiux"
+      ],
+      "ranked": [
+       "spaced-rep",
+       "a11y-nav",
+       "crop-advisor",
+       "smart-water",
+       "campus-bot",
+       "career-gap",
+       "phish-edu",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.027999999999999997,
+       "campus-bot": 0.034999999999999996,
+       "phish-edu": 0,
+       "spaced-rep": 0.3466666666666667,
+       "crop-advisor": 0.04666666666666666,
+       "smart-water": 0.04666666666666666,
+       "a11y-nav": 0.3,
+       "gh-health": 0
+      }
+     },
+     "data": {
+      "rec": [
+       "python",
+       "dsa",
+       "dbms"
+      ],
+      "ranked": [
+       "crop-advisor",
+       "smart-water",
+       "career-gap",
+       "gh-health",
+       "spaced-rep",
+       "campus-bot",
+       "phish-edu",
+       "a11y-nav"
+      ],
+      "scores": {
+       "career-gap": 0.32799999999999996,
+       "campus-bot": 0.034999999999999996,
+       "phish-edu": 0,
+       "spaced-rep": 0.04666666666666666,
+       "crop-advisor": 0.3466666666666667,
+       "smart-water": 0.3466666666666667,
+       "a11y-nav": 0,
+       "gh-health": 0.3
+      }
+     }
+    }
+   }
+  },
+  "mixed": {
+   "input": {
+    "done": [
+     "python-1",
+     "python-2",
+     "python-3",
+     "python-4",
+     "python-5",
+     "python-6",
+     "python-7",
+     "python-8",
+     "python-9",
+     "python-10",
+     "dsa-1",
+     "dsa-2",
+     "dsa-3",
+     "dsa-4",
+     "dsa-5",
+     "dsa-6",
+     "dbms-1",
+     "dbms-2",
+     "dbms-3",
+     "frontend-1",
+     "frontend-2",
+     "frontend-3",
+     "frontend-4",
+     "backend-1",
+     "backend-2",
+     "ml-1",
+     "ml-2",
+     "ml-3",
+     "ml-4",
+     "ml-5",
+     "genai-1",
+     "cyber-1",
+     "cyber-2",
+     "cyber-3",
+     "cyber-4",
+     "cyber-5",
+     "cyber-6",
+     "cyber-7",
+     "devops-1",
+     "devops-2",
+     "devops-3",
+     "iot-1",
+     "iot-2",
+     "control-1",
+     "bim-1",
+     "bim-2",
+     "bim-3",
+     "bim-4",
+     "uiux-1",
+     "uiux-2",
+     "uiux-3",
+     "uiux-4",
+     "uiux-5",
+     "uiux-6",
+     "uiux-7",
+     "uiux-8",
+     "uiux-9",
+     "uiux-10"
+    ],
+    "log": {
+     "python-1": "2026-11-25",
+     "python-2": "2026-11-24",
+     "python-3": "2026-11-23",
+     "dsa-1": "2026-11-24"
+    },
+    "focus": [
+     {
+      "d": "2026-11-25",
+      "s": 3600,
+      "r": "python"
+     },
+     {
+      "d": "2026-11-24",
+      "s": 1800,
+      "r": "dsa"
+     }
+    ]
+   },
+   "prototype": {
+    "xp": 720,
+    "rankName": "Commander",
+    "xpToNext": 780,
+    "wprog": {
+     "p": 39,
+     "dn": 58,
+     "tn": 132
+    },
+    "streak": 3,
+    "focusHours": 1.5,
+    "roadmaps": [
+     {
+      "id": "python",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     },
+     {
+      "id": "dsa",
+      "pct": 50,
+      "done": 6,
+      "next": 6
+     },
+     {
+      "id": "dbms",
+      "pct": 30,
+      "done": 3,
+      "next": 3
+     },
+     {
+      "id": "frontend",
+      "pct": 40,
+      "done": 4,
+      "next": 4
+     },
+     {
+      "id": "backend",
+      "pct": 20,
+      "done": 2,
+      "next": 2
+     },
+     {
+      "id": "ml",
+      "pct": 50,
+      "done": 5,
+      "next": 5
+     },
+     {
+      "id": "genai",
+      "pct": 10,
+      "done": 1,
+      "next": 1
+     },
+     {
+      "id": "cyber",
+      "pct": 70,
+      "done": 7,
+      "next": 7
+     },
+     {
+      "id": "devops",
+      "pct": 30,
+      "done": 3,
+      "next": 3
+     },
+     {
+      "id": "iot",
+      "pct": 20,
+      "done": 2,
+      "next": 2
+     },
+     {
+      "id": "control",
+      "pct": 10,
+      "done": 1,
+      "next": 1
+     },
+     {
+      "id": "bim",
+      "pct": 40,
+      "done": 4,
+      "next": 4
+     },
+     {
+      "id": "uiux",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     }
+    ],
+    "build": {
+     "career-gap": {
+      "d": 24,
+      "t": 52,
+      "pct": 46
+     },
+     "campus-bot": {
+      "d": 16,
+      "t": 40,
+      "pct": 40
+     },
+     "phish-edu": {
+      "d": 11,
+      "t": 20,
+      "pct": 55
+     },
+     "spaced-rep": {
+      "d": 17,
+      "t": 30,
+      "pct": 57
+     },
+     "crop-advisor": {
+      "d": 17,
+      "t": 30,
+      "pct": 57
+     },
+     "smart-water": {
+      "d": 14,
+      "t": 30,
+      "pct": 47
+     },
+     "a11y-nav": {
+      "d": 14,
+      "t": 20,
+      "pct": 70
+     },
+     "gh-health": {
+      "d": 6,
+      "t": 20,
+      "pct": 30
+     }
+    },
+    "byInterest": {
+     "ai": {
+      "rec": [
+       "dsa",
+       "ml",
+       "genai"
+      ],
+      "ranked": [
+       "crop-advisor",
+       "career-gap",
+       "campus-bot",
+       "a11y-nav",
+       "spaced-rep",
+       "phish-edu",
+       "smart-water",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.622,
+       "campus-bot": 0.58,
+       "phish-edu": 0.385,
+       "spaced-rep": 0.3966666666666666,
+       "crop-advisor": 0.6966666666666665,
+       "smart-water": 0.3266666666666666,
+       "a11y-nav": 0.48999999999999994,
+       "gh-health": 0.21
+      }
+     },
+     "web": {
+      "rec": [
+       "dsa",
+       "frontend",
+       "dbms"
+      ],
+      "ranked": [
+       "a11y-nav",
+       "spaced-rep",
+       "phish-edu",
+       "campus-bot",
+       "gh-health",
+       "crop-advisor",
+       "smart-water",
+       "career-gap"
+      ],
+      "scores": {
+       "career-gap": 0.322,
+       "campus-bot": 0.58,
+       "phish-edu": 0.685,
+       "spaced-rep": 0.6966666666666665,
+       "crop-advisor": 0.3966666666666666,
+       "smart-water": 0.3266666666666666,
+       "a11y-nav": 0.7899999999999999,
+       "gh-health": 0.51
+      }
+     },
+     "sec": {
+      "rec": [
+       "cyber",
+       "dsa",
+       "devops"
+      ],
+      "ranked": [
+       "phish-edu",
+       "a11y-nav",
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "career-gap",
+       "campus-bot",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.322,
+       "campus-bot": 0.27999999999999997,
+       "phish-edu": 0.685,
+       "spaced-rep": 0.3966666666666666,
+       "crop-advisor": 0.3966666666666666,
+       "smart-water": 0.3266666666666666,
+       "a11y-nav": 0.48999999999999994,
+       "gh-health": 0.21
+      }
+     },
+     "hw": {
+      "rec": [
+       "iot",
+       "control"
+      ],
+      "ranked": [
+       "smart-water",
+       "a11y-nav",
+       "spaced-rep",
+       "crop-advisor",
+       "phish-edu",
+       "career-gap",
+       "campus-bot",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.322,
+       "campus-bot": 0.27999999999999997,
+       "phish-edu": 0.385,
+       "spaced-rep": 0.3966666666666666,
+       "crop-advisor": 0.3966666666666666,
+       "smart-water": 0.6266666666666666,
+       "a11y-nav": 0.48999999999999994,
+       "gh-health": 0.21
+      }
+     },
+     "civil": {
+      "rec": [
+       "bim"
+      ],
+      "ranked": [
+       "a11y-nav",
+       "spaced-rep",
+       "crop-advisor",
+       "phish-edu",
+       "smart-water",
+       "career-gap",
+       "campus-bot",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.322,
+       "campus-bot": 0.27999999999999997,
+       "phish-edu": 0.385,
+       "spaced-rep": 0.3966666666666666,
+       "crop-advisor": 0.3966666666666666,
+       "smart-water": 0.3266666666666666,
+       "a11y-nav": 0.48999999999999994,
+       "gh-health": 0.21
+      }
+     },
+     "design": {
+      "rec": [
+       "frontend"
+      ],
+      "ranked": [
+       "a11y-nav",
+       "spaced-rep",
+       "crop-advisor",
+       "phish-edu",
+       "smart-water",
+       "career-gap",
+       "campus-bot",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.322,
+       "campus-bot": 0.27999999999999997,
+       "phish-edu": 0.385,
+       "spaced-rep": 0.6966666666666665,
+       "crop-advisor": 0.3966666666666666,
+       "smart-water": 0.3266666666666666,
+       "a11y-nav": 0.7899999999999999,
+       "gh-health": 0.21
+      }
+     },
+     "data": {
+      "rec": [
+       "dsa",
+       "ml",
+       "bim"
+      ],
+      "ranked": [
+       "crop-advisor",
+       "smart-water",
+       "career-gap",
+       "gh-health",
+       "a11y-nav",
+       "spaced-rep",
+       "phish-edu",
+       "campus-bot"
+      ],
+      "scores": {
+       "career-gap": 0.622,
+       "campus-bot": 0.27999999999999997,
+       "phish-edu": 0.385,
+       "spaced-rep": 0.3966666666666666,
+       "crop-advisor": 0.6966666666666665,
+       "smart-water": 0.6266666666666666,
+       "a11y-nav": 0.48999999999999994,
+       "gh-health": 0.51
+      }
+     }
+    }
+   }
+  },
+  "gap_streak": {
+   "input": {
+    "done": [
+     "python-1",
+     "python-2",
+     "python-3"
+    ],
+    "log": {
+     "python-1": "2026-11-24",
+     "python-2": "2026-11-22"
+    },
+    "focus": []
+   },
+   "prototype": {
+    "xp": 30,
+    "rankName": "Cadet",
+    "xpToNext": 70,
+    "wprog": {
+     "p": 2,
+     "dn": 3,
+     "tn": 132
+    },
+    "streak": 1,
+    "focusHours": 0,
+    "roadmaps": [
+     {
+      "id": "python",
+      "pct": 30,
+      "done": 3,
+      "next": 3
+     },
+     {
+      "id": "dsa",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "dbms",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "frontend",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "backend",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "ml",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "genai",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "cyber",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "devops",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "iot",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "control",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "bim",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "uiux",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     }
+    ],
+    "build": {
+     "career-gap": {
+      "d": 3,
+      "t": 52,
+      "pct": 6
+     },
+     "campus-bot": {
+      "d": 3,
+      "t": 40,
+      "pct": 8
+     },
+     "phish-edu": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     },
+     "spaced-rep": {
+      "d": 3,
+      "t": 30,
+      "pct": 10
+     },
+     "crop-advisor": {
+      "d": 3,
+      "t": 30,
+      "pct": 10
+     },
+     "smart-water": {
+      "d": 3,
+      "t": 30,
+      "pct": 10
+     },
+     "a11y-nav": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     },
+     "gh-health": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     }
+    },
+    "byInterest": {
+     "ai": {
+      "rec": [
+       "python",
+       "dsa",
+       "ml"
+      ],
+      "ranked": [
+       "crop-advisor",
+       "campus-bot",
+       "career-gap",
+       "spaced-rep",
+       "smart-water",
+       "phish-edu",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.34199999999999997,
+       "campus-bot": 0.3525,
+       "phish-edu": 0,
+       "spaced-rep": 0.06999999999999999,
+       "crop-advisor": 0.37,
+       "smart-water": 0.06999999999999999,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "web": {
+      "rec": [
+       "python",
+       "frontend",
+       "uiux"
+      ],
+      "ranked": [
+       "spaced-rep",
+       "campus-bot",
+       "phish-edu",
+       "a11y-nav",
+       "gh-health",
+       "crop-advisor",
+       "smart-water",
+       "career-gap"
+      ],
+      "scores": {
+       "career-gap": 0.041999999999999996,
+       "campus-bot": 0.3525,
+       "phish-edu": 0.3,
+       "spaced-rep": 0.37,
+       "crop-advisor": 0.06999999999999999,
+       "smart-water": 0.06999999999999999,
+       "a11y-nav": 0.3,
+       "gh-health": 0.3
+      }
+     },
+     "sec": {
+      "rec": [
+       "cyber",
+       "dsa",
+       "devops"
+      ],
+      "ranked": [
+       "phish-edu",
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "campus-bot",
+       "career-gap",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.041999999999999996,
+       "campus-bot": 0.0525,
+       "phish-edu": 0.3,
+       "spaced-rep": 0.06999999999999999,
+       "crop-advisor": 0.06999999999999999,
+       "smart-water": 0.06999999999999999,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "hw": {
+      "rec": [
+       "control",
+       "iot"
+      ],
+      "ranked": [
+       "smart-water",
+       "spaced-rep",
+       "crop-advisor",
+       "campus-bot",
+       "career-gap",
+       "phish-edu",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.041999999999999996,
+       "campus-bot": 0.0525,
+       "phish-edu": 0,
+       "spaced-rep": 0.06999999999999999,
+       "crop-advisor": 0.06999999999999999,
+       "smart-water": 0.37,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "civil": {
+      "rec": [
+       "bim"
+      ],
+      "ranked": [
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "campus-bot",
+       "career-gap",
+       "phish-edu",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.041999999999999996,
+       "campus-bot": 0.0525,
+       "phish-edu": 0,
+       "spaced-rep": 0.06999999999999999,
+       "crop-advisor": 0.06999999999999999,
+       "smart-water": 0.06999999999999999,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "design": {
+      "rec": [
+       "frontend",
+       "uiux"
+      ],
+      "ranked": [
+       "spaced-rep",
+       "a11y-nav",
+       "crop-advisor",
+       "smart-water",
+       "campus-bot",
+       "career-gap",
+       "phish-edu",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.041999999999999996,
+       "campus-bot": 0.0525,
+       "phish-edu": 0,
+       "spaced-rep": 0.37,
+       "crop-advisor": 0.06999999999999999,
+       "smart-water": 0.06999999999999999,
+       "a11y-nav": 0.3,
+       "gh-health": 0
+      }
+     },
+     "data": {
+      "rec": [
+       "python",
+       "dsa",
+       "dbms"
+      ],
+      "ranked": [
+       "crop-advisor",
+       "smart-water",
+       "career-gap",
+       "gh-health",
+       "spaced-rep",
+       "campus-bot",
+       "phish-edu",
+       "a11y-nav"
+      ],
+      "scores": {
+       "career-gap": 0.34199999999999997,
+       "campus-bot": 0.0525,
+       "phish-edu": 0,
+       "spaced-rep": 0.06999999999999999,
+       "crop-advisor": 0.37,
+       "smart-water": 0.37,
+       "a11y-nav": 0,
+       "gh-health": 0.3
+      }
+     }
+    }
+   }
+  },
+  "stale": {
+   "input": {
+    "done": [
+     "dsa-1",
+     "dsa-2",
+     "dsa-3",
+     "dsa-4"
+    ],
+    "log": {
+     "dsa-1": "2026-11-23"
+    },
+    "focus": []
+   },
+   "prototype": {
+    "xp": 60,
+    "rankName": "Cadet",
+    "xpToNext": 40,
+    "wprog": {
+     "p": 3,
+     "dn": 4,
+     "tn": 132
+    },
+    "streak": 0,
+    "focusHours": 0,
+    "roadmaps": [
+     {
+      "id": "python",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "dsa",
+      "pct": 33,
+      "done": 4,
+      "next": 4
+     },
+     {
+      "id": "dbms",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "frontend",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "backend",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "ml",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "genai",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "cyber",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "devops",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "iot",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "control",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "bim",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "uiux",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     }
+    ],
+    "build": {
+     "career-gap": {
+      "d": 4,
+      "t": 52,
+      "pct": 8
+     },
+     "campus-bot": {
+      "d": 0,
+      "t": 40,
+      "pct": 0
+     },
+     "phish-edu": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     },
+     "spaced-rep": {
+      "d": 0,
+      "t": 30,
+      "pct": 0
+     },
+     "crop-advisor": {
+      "d": 0,
+      "t": 30,
+      "pct": 0
+     },
+     "smart-water": {
+      "d": 0,
+      "t": 30,
+      "pct": 0
+     },
+     "a11y-nav": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     },
+     "gh-health": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     }
+    },
+    "byInterest": {
+     "ai": {
+      "rec": [
+       "dsa",
+       "python",
+       "ml"
+      ],
+      "ranked": [
+       "career-gap",
+       "campus-bot",
+       "crop-advisor",
+       "phish-edu",
+       "spaced-rep",
+       "smart-water",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.3462,
+       "campus-bot": 0.3,
+       "phish-edu": 0,
+       "spaced-rep": 0,
+       "crop-advisor": 0.3,
+       "smart-water": 0,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "web": {
+      "rec": [
+       "dsa",
+       "python",
+       "frontend"
+      ],
+      "ranked": [
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "a11y-nav",
+       "gh-health",
+       "career-gap",
+       "crop-advisor",
+       "smart-water"
+      ],
+      "scores": {
+       "career-gap": 0.0462,
+       "campus-bot": 0.3,
+       "phish-edu": 0.3,
+       "spaced-rep": 0.3,
+       "crop-advisor": 0,
+       "smart-water": 0,
+       "a11y-nav": 0.3,
+       "gh-health": 0.3
+      }
+     },
+     "sec": {
+      "rec": [
+       "dsa",
+       "cyber",
+       "devops"
+      ],
+      "ranked": [
+       "phish-edu",
+       "career-gap",
+       "campus-bot",
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.0462,
+       "campus-bot": 0,
+       "phish-edu": 0.3,
+       "spaced-rep": 0,
+       "crop-advisor": 0,
+       "smart-water": 0,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "hw": {
+      "rec": [
+       "control",
+       "iot"
+      ],
+      "ranked": [
+       "smart-water",
+       "career-gap",
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "crop-advisor",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.0462,
+       "campus-bot": 0,
+       "phish-edu": 0,
+       "spaced-rep": 0,
+       "crop-advisor": 0,
+       "smart-water": 0.3,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "civil": {
+      "rec": [
+       "bim"
+      ],
+      "ranked": [
+       "career-gap",
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.0462,
+       "campus-bot": 0,
+       "phish-edu": 0,
+       "spaced-rep": 0,
+       "crop-advisor": 0,
+       "smart-water": 0,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "design": {
+      "rec": [
+       "frontend",
+       "uiux"
+      ],
+      "ranked": [
+       "spaced-rep",
+       "a11y-nav",
+       "career-gap",
+       "campus-bot",
+       "phish-edu",
+       "crop-advisor",
+       "smart-water",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.0462,
+       "campus-bot": 0,
+       "phish-edu": 0,
+       "spaced-rep": 0.3,
+       "crop-advisor": 0,
+       "smart-water": 0,
+       "a11y-nav": 0.3,
+       "gh-health": 0
+      }
+     },
+     "data": {
+      "rec": [
+       "dsa",
+       "python",
+       "dbms"
+      ],
+      "ranked": [
+       "career-gap",
+       "crop-advisor",
+       "smart-water",
+       "gh-health",
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "a11y-nav"
+      ],
+      "scores": {
+       "career-gap": 0.3462,
+       "campus-bot": 0,
+       "phish-edu": 0,
+       "spaced-rep": 0,
+       "crop-advisor": 0.3,
+       "smart-water": 0.3,
+       "a11y-nav": 0,
+       "gh-health": 0.3
+      }
+     }
+    }
+   }
+  },
+  "focus_only": {
+   "input": {
+    "done": [],
+    "log": {},
+    "focus": [
+     {
+      "d": "2026-11-25",
+      "s": 1500,
+      "r": "dsa"
+     },
+     {
+      "d": "2026-11-24",
+      "s": 600,
+      "r": "dsa"
+     }
+    ]
+   },
+   "prototype": {
+    "xp": 0,
+    "rankName": "Cadet",
+    "xpToNext": 100,
+    "wprog": {
+     "p": 0,
+     "dn": 0,
+     "tn": 132
+    },
+    "streak": 2,
+    "focusHours": 0.5833333333333334,
+    "roadmaps": [
+     {
+      "id": "python",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "dsa",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "dbms",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "frontend",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "backend",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "ml",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "genai",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "cyber",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "devops",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "iot",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "control",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "bim",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     },
+     {
+      "id": "uiux",
+      "pct": 0,
+      "done": 0,
+      "next": 0
+     }
+    ],
+    "build": {
+     "career-gap": {
+      "d": 0,
+      "t": 52,
+      "pct": 0
+     },
+     "campus-bot": {
+      "d": 0,
+      "t": 40,
+      "pct": 0
+     },
+     "phish-edu": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     },
+     "spaced-rep": {
+      "d": 0,
+      "t": 30,
+      "pct": 0
+     },
+     "crop-advisor": {
+      "d": 0,
+      "t": 30,
+      "pct": 0
+     },
+     "smart-water": {
+      "d": 0,
+      "t": 30,
+      "pct": 0
+     },
+     "a11y-nav": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     },
+     "gh-health": {
+      "d": 0,
+      "t": 20,
+      "pct": 0
+     }
+    },
+    "byInterest": {
+     "ai": {
+      "rec": [
+       "python",
+       "dsa",
+       "ml"
+      ],
+      "ranked": [
+       "career-gap",
+       "campus-bot",
+       "crop-advisor",
+       "phish-edu",
+       "spaced-rep",
+       "smart-water",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.3,
+       "campus-bot": 0.3,
+       "phish-edu": 0,
+       "spaced-rep": 0,
+       "crop-advisor": 0.3,
+       "smart-water": 0,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "web": {
+      "rec": [
+       "python",
+       "frontend",
+       "uiux"
+      ],
+      "ranked": [
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "a11y-nav",
+       "gh-health",
+       "career-gap",
+       "crop-advisor",
+       "smart-water"
+      ],
+      "scores": {
+       "career-gap": 0,
+       "campus-bot": 0.3,
+       "phish-edu": 0.3,
+       "spaced-rep": 0.3,
+       "crop-advisor": 0,
+       "smart-water": 0,
+       "a11y-nav": 0.3,
+       "gh-health": 0.3
+      }
+     },
+     "sec": {
+      "rec": [
+       "cyber",
+       "dsa",
+       "devops"
+      ],
+      "ranked": [
+       "phish-edu",
+       "career-gap",
+       "campus-bot",
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0,
+       "campus-bot": 0,
+       "phish-edu": 0.3,
+       "spaced-rep": 0,
+       "crop-advisor": 0,
+       "smart-water": 0,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "hw": {
+      "rec": [
+       "control",
+       "iot"
+      ],
+      "ranked": [
+       "smart-water",
+       "career-gap",
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "crop-advisor",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0,
+       "campus-bot": 0,
+       "phish-edu": 0,
+       "spaced-rep": 0,
+       "crop-advisor": 0,
+       "smart-water": 0.3,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "civil": {
+      "rec": [
+       "bim"
+      ],
+      "ranked": [
+       "career-gap",
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0,
+       "campus-bot": 0,
+       "phish-edu": 0,
+       "spaced-rep": 0,
+       "crop-advisor": 0,
+       "smart-water": 0,
+       "a11y-nav": 0,
+       "gh-health": 0
+      }
+     },
+     "design": {
+      "rec": [
+       "frontend",
+       "uiux"
+      ],
+      "ranked": [
+       "spaced-rep",
+       "a11y-nav",
+       "career-gap",
+       "campus-bot",
+       "phish-edu",
+       "crop-advisor",
+       "smart-water",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0,
+       "campus-bot": 0,
+       "phish-edu": 0,
+       "spaced-rep": 0.3,
+       "crop-advisor": 0,
+       "smart-water": 0,
+       "a11y-nav": 0.3,
+       "gh-health": 0
+      }
+     },
+     "data": {
+      "rec": [
+       "python",
+       "dsa",
+       "dbms"
+      ],
+      "ranked": [
+       "career-gap",
+       "crop-advisor",
+       "smart-water",
+       "gh-health",
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "a11y-nav"
+      ],
+      "scores": {
+       "career-gap": 0.3,
+       "campus-bot": 0,
+       "phish-edu": 0,
+       "spaced-rep": 0,
+       "crop-advisor": 0.3,
+       "smart-water": 0.3,
+       "a11y-nav": 0,
+       "gh-health": 0.3
+      }
+     }
+    }
+   }
+  },
+  "all_done": {
+   "input": {
+    "done": [
+     "python-1",
+     "python-2",
+     "python-3",
+     "python-4",
+     "python-5",
+     "python-6",
+     "python-7",
+     "python-8",
+     "python-9",
+     "python-10",
+     "dsa-1",
+     "dsa-2",
+     "dsa-3",
+     "dsa-4",
+     "dsa-5",
+     "dsa-6",
+     "dsa-7",
+     "dsa-8",
+     "dsa-9",
+     "dsa-10",
+     "dsa-11",
+     "dsa-12",
+     "dbms-1",
+     "dbms-2",
+     "dbms-3",
+     "dbms-4",
+     "dbms-5",
+     "dbms-6",
+     "dbms-7",
+     "dbms-8",
+     "dbms-9",
+     "dbms-10",
+     "frontend-1",
+     "frontend-2",
+     "frontend-3",
+     "frontend-4",
+     "frontend-5",
+     "frontend-6",
+     "frontend-7",
+     "frontend-8",
+     "frontend-9",
+     "frontend-10",
+     "backend-1",
+     "backend-2",
+     "backend-3",
+     "backend-4",
+     "backend-5",
+     "backend-6",
+     "backend-7",
+     "backend-8",
+     "backend-9",
+     "backend-10",
+     "ml-1",
+     "ml-2",
+     "ml-3",
+     "ml-4",
+     "ml-5",
+     "ml-6",
+     "ml-7",
+     "ml-8",
+     "ml-9",
+     "ml-10",
+     "genai-1",
+     "genai-2",
+     "genai-3",
+     "genai-4",
+     "genai-5",
+     "genai-6",
+     "genai-7",
+     "genai-8",
+     "genai-9",
+     "genai-10",
+     "cyber-1",
+     "cyber-2",
+     "cyber-3",
+     "cyber-4",
+     "cyber-5",
+     "cyber-6",
+     "cyber-7",
+     "cyber-8",
+     "cyber-9",
+     "cyber-10",
+     "devops-1",
+     "devops-2",
+     "devops-3",
+     "devops-4",
+     "devops-5",
+     "devops-6",
+     "devops-7",
+     "devops-8",
+     "devops-9",
+     "devops-10",
+     "iot-1",
+     "iot-2",
+     "iot-3",
+     "iot-4",
+     "iot-5",
+     "iot-6",
+     "iot-7",
+     "iot-8",
+     "iot-9",
+     "iot-10",
+     "control-1",
+     "control-2",
+     "control-3",
+     "control-4",
+     "control-5",
+     "control-6",
+     "control-7",
+     "control-8",
+     "control-9",
+     "control-10",
+     "bim-1",
+     "bim-2",
+     "bim-3",
+     "bim-4",
+     "bim-5",
+     "bim-6",
+     "bim-7",
+     "bim-8",
+     "bim-9",
+     "bim-10",
+     "uiux-1",
+     "uiux-2",
+     "uiux-3",
+     "uiux-4",
+     "uiux-5",
+     "uiux-6",
+     "uiux-7",
+     "uiux-8",
+     "uiux-9",
+     "uiux-10"
+    ],
+    "log": {},
+    "focus": []
+   },
+   "prototype": {
+    "xp": 1830,
+    "rankName": "Admiral",
+    "xpToNext": null,
+    "wprog": {
+     "p": 100,
+     "dn": 132,
+     "tn": 132
+    },
+    "streak": 0,
+    "focusHours": 0,
+    "roadmaps": [
+     {
+      "id": "python",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     },
+     {
+      "id": "dsa",
+      "pct": 100,
+      "done": 12,
+      "next": -1
+     },
+     {
+      "id": "dbms",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     },
+     {
+      "id": "frontend",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     },
+     {
+      "id": "backend",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     },
+     {
+      "id": "ml",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     },
+     {
+      "id": "genai",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     },
+     {
+      "id": "cyber",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     },
+     {
+      "id": "devops",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     },
+     {
+      "id": "iot",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     },
+     {
+      "id": "control",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     },
+     {
+      "id": "bim",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     },
+     {
+      "id": "uiux",
+      "pct": 100,
+      "done": 10,
+      "next": -1
+     }
+    ],
+    "build": {
+     "career-gap": {
+      "d": 52,
+      "t": 52,
+      "pct": 100
+     },
+     "campus-bot": {
+      "d": 40,
+      "t": 40,
+      "pct": 100
+     },
+     "phish-edu": {
+      "d": 20,
+      "t": 20,
+      "pct": 100
+     },
+     "spaced-rep": {
+      "d": 30,
+      "t": 30,
+      "pct": 100
+     },
+     "crop-advisor": {
+      "d": 30,
+      "t": 30,
+      "pct": 100
+     },
+     "smart-water": {
+      "d": 30,
+      "t": 30,
+      "pct": 100
+     },
+     "a11y-nav": {
+      "d": 20,
+      "t": 20,
+      "pct": 100
+     },
+     "gh-health": {
+      "d": 20,
+      "t": 20,
+      "pct": 100
+     }
+    },
+    "byInterest": {
+     "ai": {
+      "rec": [],
+      "ranked": [
+       "career-gap",
+       "campus-bot",
+       "crop-advisor",
+       "phish-edu",
+       "spaced-rep",
+       "smart-water",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 1,
+       "campus-bot": 1,
+       "phish-edu": 0.7,
+       "spaced-rep": 0.7,
+       "crop-advisor": 1,
+       "smart-water": 0.7,
+       "a11y-nav": 0.7,
+       "gh-health": 0.7
+      }
+     },
+     "web": {
+      "rec": [],
+      "ranked": [
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "a11y-nav",
+       "gh-health",
+       "career-gap",
+       "crop-advisor",
+       "smart-water"
+      ],
+      "scores": {
+       "career-gap": 0.7,
+       "campus-bot": 1,
+       "phish-edu": 1,
+       "spaced-rep": 1,
+       "crop-advisor": 0.7,
+       "smart-water": 0.7,
+       "a11y-nav": 1,
+       "gh-health": 1
+      }
+     },
+     "sec": {
+      "rec": [],
+      "ranked": [
+       "phish-edu",
+       "career-gap",
+       "campus-bot",
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.7,
+       "campus-bot": 0.7,
+       "phish-edu": 1,
+       "spaced-rep": 0.7,
+       "crop-advisor": 0.7,
+       "smart-water": 0.7,
+       "a11y-nav": 0.7,
+       "gh-health": 0.7
+      }
+     },
+     "hw": {
+      "rec": [],
+      "ranked": [
+       "smart-water",
+       "career-gap",
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "crop-advisor",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.7,
+       "campus-bot": 0.7,
+       "phish-edu": 0.7,
+       "spaced-rep": 0.7,
+       "crop-advisor": 0.7,
+       "smart-water": 1,
+       "a11y-nav": 0.7,
+       "gh-health": 0.7
+      }
+     },
+     "civil": {
+      "rec": [],
+      "ranked": [
+       "career-gap",
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "crop-advisor",
+       "smart-water",
+       "a11y-nav",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.7,
+       "campus-bot": 0.7,
+       "phish-edu": 0.7,
+       "spaced-rep": 0.7,
+       "crop-advisor": 0.7,
+       "smart-water": 0.7,
+       "a11y-nav": 0.7,
+       "gh-health": 0.7
+      }
+     },
+     "design": {
+      "rec": [],
+      "ranked": [
+       "spaced-rep",
+       "a11y-nav",
+       "career-gap",
+       "campus-bot",
+       "phish-edu",
+       "crop-advisor",
+       "smart-water",
+       "gh-health"
+      ],
+      "scores": {
+       "career-gap": 0.7,
+       "campus-bot": 0.7,
+       "phish-edu": 0.7,
+       "spaced-rep": 1,
+       "crop-advisor": 0.7,
+       "smart-water": 0.7,
+       "a11y-nav": 1,
+       "gh-health": 0.7
+      }
+     },
+     "data": {
+      "rec": [],
+      "ranked": [
+       "career-gap",
+       "crop-advisor",
+       "smart-water",
+       "gh-health",
+       "campus-bot",
+       "phish-edu",
+       "spaced-rep",
+       "a11y-nav"
+      ],
+      "scores": {
+       "career-gap": 1,
+       "campus-bot": 0.7,
+       "phish-edu": 0.7,
+       "spaced-rep": 0.7,
+       "crop-advisor": 1,
+       "smart-water": 1,
+       "a11y-nav": 0.7,
+       "gh-health": 1
+      }
+     }
+    }
+   }
+  }
+ }
+}

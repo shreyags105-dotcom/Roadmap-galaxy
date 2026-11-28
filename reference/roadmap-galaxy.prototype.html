@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Roadmap Galaxy</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Space+Mono&display=swap"><link rel="icon" href="data:,">
+<style>
+:root{--void:#020617;--cobalt:#0F1F5C;--blue:#3B82F6;--ice:#BAE6FD;--star:#F1F5FF;--sun:#FFC83D;--err:#FF6B8B;
+--fg:var(--star);--mut:rgba(241,245,255,.68);--card:rgba(15,31,92,.5);--bd:rgba(186,230,253,.22);--glow:rgba(59,130,246,.4);
+--btn:linear-gradient(135deg,var(--blue) 35%,var(--cobalt) 230%);--prog:linear-gradient(90deg,var(--blue),var(--ice));
+--hf:"Space Grotesk",system-ui,sans-serif;--bf:"Figtree",system-ui,sans-serif;--mf:"Space Mono",ui-monospace,monospace;
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--void)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--void);color:var(--fg);font:16px/1.6 var(--bf);min-height:100vh}
+h1,h2,h3,header b{font-family:var(--hf);letter-spacing:-.01em}
+.mono{font-family:var(--mf);font-variant-numeric:tabular-nums}
+/* deep-space sky */
+#sky{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:radial-gradient(ellipse 90% 70% at 50% -5%,rgba(15,31,92,.95),var(--void) 72%)}
+#sky>div{position:absolute}
+.neb{inset:-10%;background:radial-gradient(40% 35% at 20% 30%,rgba(59,130,246,.16),transparent 70%),radial-gradient(45% 40% at 80% 70%,rgba(15,31,92,.7),transparent 70%);animation:drift 40s ease-in-out infinite alternate}
+.mw{width:170%;height:20%;left:-35%;top:38%;transform:rotate(-26deg);background:linear-gradient(90deg,transparent,rgba(186,230,253,.06) 30%,rgba(241,245,255,.11) 50%,rgba(186,230,253,.06) 70%,transparent);filter:blur(28px)}
+.st{inset:0}
+.st1{background-image:radial-gradient(1px 1px at 20px 30px,var(--star),transparent),radial-gradient(1px 1px at 110px 150px,var(--ice),transparent),radial-gradient(1px 1px at 170px 80px,var(--star),transparent);background-size:200px 200px;opacity:.7;animation:tw 6s ease-in-out infinite alternate}
+.st2{background-image:radial-gradient(1.5px 1.5px at 60px 90px,var(--star),transparent),radial-gradient(1.5px 1.5px at 240px 200px,var(--ice),transparent);background-size:320px 320px;opacity:.6;animation:tw 9s ease-in-out infinite alternate-reverse}
+.st3{display:none;background-image:radial-gradient(2px 2px at 140px 60px,var(--star),transparent),radial-gradient(2px 2px at 400px 330px,var(--ice),transparent);background-size:520px 520px;opacity:.8;animation:tw 12s ease-in-out infinite alternate}
+@media(min-width:900px){.st3{display:block}}
+.shoot{width:130px;height:1px;background:linear-gradient(90deg,var(--star),transparent);opacity:0;animation:shoot 11s linear infinite}
+.sh1{top:12%;left:18%}.sh2{top:30%;left:55%;animation-delay:6s;animation-duration:15s}
+@keyframes drift{to{transform:translate(3%,2%) scale(1.08)}}
+@keyframes tw{from{opacity:.4}to{opacity:.9}}
+@keyframes shoot{0%{opacity:0;transform:translate(0,0) rotate(25deg)}2%{opacity:1}7%{opacity:0;transform:translate(420px,196px) rotate(25deg)}100%{opacity:0}}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.shoot{display:none}}
+/* layout */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;align-items:center;padding:10px 24px;flex-wrap:wrap;background:rgba(2,6,23,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+header b{margin-right:14px;color:var(--ice);font-size:1.1em}
+header a{padding:6px 12px;border-radius:9px;color:var(--mut);text-decoration:none;font-weight:500;transition:.2s}
+header a:hover{color:var(--star);background:rgba(59,130,246,.15)}
+header a.on{background:var(--btn);color:var(--star);box-shadow:0 0 18px var(--glow)}
+main{overflow-x:clip;position:relative;z-index:1;max-width:1240px;margin:0 auto;padding:32px 24px 90px}
+main>p,main>ul.t{max-width:72ch}
+h1{margin:.2em 0 .3em;font-size:clamp(1.9rem,3.2vw,2.7rem);line-height:1.15}
+h2{margin:2em 0 .6em;font-size:1.3em;color:var(--ice)}
+a{color:var(--ice)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
+.card{position:relative;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:border-color .25s,box-shadow .25s,transform .25s}
+.card:hover{border-color:var(--blue);box-shadow:0 0 28px var(--glow);transform:translateY(-2px)}
+.card::before,.card::after{content:"";position:absolute;width:14px;height:14px;pointer-events:none}
+.card::before{top:6px;left:6px;border-top:2px solid var(--blue);border-left:2px solid var(--blue)}
+.card::after{bottom:6px;right:6px;border-bottom:2px solid var(--ice);border-right:2px solid var(--ice)}
+.card h3{margin:.1em 0 .3em;font-size:1.1em}
+.mut{color:var(--mut);font-size:.9em}
+.tag{display:inline-block;font-size:.75em;color:var(--ice);border:1px solid var(--bd);border-radius:20px;padding:1px 9px;margin:2px 4px 2px 0;background:rgba(2,6,23,.35)}
+.bar{height:6px;background:rgba(186,230,253,.15);border-radius:6px;overflow:hidden;margin:10px 0}
+.bar i{display:block;height:100%;background:var(--prog);border-radius:6px}
+button,select,input,textarea{font:inherit;color:var(--star);background:rgba(2,6,23,.55);border:1px solid var(--bd);border-radius:9px;padding:7px 12px}
+option{background:var(--void);color:var(--star)}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
+input[type=checkbox]{accent-color:var(--blue)}
+button{cursor:pointer;transition:.2s}button:hover{border-color:var(--blue);box-shadow:0 0 14px var(--glow)}
+button.p{background:var(--btn);border-color:var(--blue);font-weight:600}
+button.p:hover{filter:brightness(1.15)}
+button.sun{background:var(--sun);color:var(--void);border-color:var(--sun);font-weight:700;padding:10px 20px;box-shadow:0 0 26px rgba(255,200,61,.45)}
+button.sun:hover{box-shadow:0 0 40px rgba(255,200,61,.7);filter:brightness(1.05)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.row input{flex:1;min-width:170px}
+ul.t{list-style:none;padding:0}ul.t li{padding:8px 0;border-bottom:1px solid var(--bd)}
+.s0{color:var(--mut)}.s1{color:var(--ice)}.s2{color:var(--blue);font-weight:600}.lnk{cursor:pointer}
+/* hero: sun and orbiting planets */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;padding:20px 0 8px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.3rem,5vw,3.7rem)}.hero p{max-width:46ch;color:var(--mut)}
+.kick{font-family:var(--mf);font-size:.78em;letter-spacing:.14em;text-transform:uppercase;color:var(--ice)}
+.orrery{position:relative;width:100%;max-width:340px;aspect-ratio:1;margin:0 auto}
+.sunb{position:absolute;left:50%;top:50%;width:24%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 40% 38%,var(--star),var(--sun) 45%);box-shadow:0 0 40px 14px rgba(255,200,61,.5),0 0 110px 40px rgba(255,200,61,.22)}
+.orb{position:absolute;left:50%;top:50%;border-radius:50%;border:1px solid rgba(186,230,253,.25);transform:translate(-50%,-50%)}
+.o1{width:48%;aspect-ratio:1;animation:spin 18s linear infinite}.o2{width:72%;aspect-ratio:1;animation:spin 28s linear infinite reverse}.o3{width:96%;aspect-ratio:1;animation:spin 40s linear infinite}
+.orb i{position:absolute;top:-7px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--ice),var(--blue) 55%,var(--cobalt));box-shadow:0 0 14px rgba(59,130,246,.8)}
+.o2 i{width:18px;height:18px;margin-left:-9px;top:-9px}
+
+/* v3: mission control */
+@keyframes enter{from{opacity:0;transform:translateY(8px)}}
+@keyframes fill{from{transform:scaleX(0)}}
+#app.nav>*{animation:enter .35s ease both}
+.bar i{transform-origin:left;animation:fill .8s cubic-bezier(.2,.8,.2,1)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat .big{font-size:2rem;font-weight:700;color:var(--star);line-height:1.2;margin:4px 0}
+.cont{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:24px;border-color:rgba(59,130,246,.55)}
+.cont h3{font-size:1.35em}
+.cont .mut b{color:var(--star);font-weight:600}
+li.nx{border-left:2px solid var(--blue);padding-left:10px}
+.rh{display:flex;gap:12px;align-items:center}.rh h3{margin:0}
+.ico{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:10px;border:1px solid var(--bd);background:rgba(59,130,246,.14);color:var(--ice);font:.95rem var(--mf);transition:box-shadow .25s}
+.rc:hover .ico{box-shadow:0 0 16px var(--glow)}
+.meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0 2px}
+.dots{display:inline-flex;gap:3px}.dots i{width:7px;height:7px;border-radius:50%;background:rgba(186,230,253,.22)}
+.dots i.on{background:var(--ice);box-shadow:0 0 6px rgba(186,230,253,.6)}
+.expl{margin:14px 0;max-width:80ch}
+.orrery{max-width:400px}
+.orb{pointer-events:none}
+.sunb,.pl{pointer-events:auto}
+.sunb{display:block;cursor:pointer}
+.pl{position:absolute;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--ice),var(--blue) 55%,var(--cobalt));opacity:calc(.5 + .5*var(--g));box-shadow:0 0 calc(3px + 18px*var(--g)) calc(1px + 3px*var(--g)) rgba(59,130,246,calc(.3 + .7*var(--g)));transition:transform .2s}
+.pl::after{content:"";position:absolute;inset:-9px;border-radius:50%}
+.pl:hover,.pl:focus-visible{transform:scale(1.5);outline:none}
+.orrery:hover .orb,.orrery:focus-within .orb{animation-play-state:paused}
+.hint{text-align:center;font-size:.82em;margin:10px auto 0}
+#tip{position:fixed;z-index:20;pointer-events:none;padding:5px 11px;border-radius:8px;background:rgba(15,31,92,.94);border:1px solid var(--bd);color:var(--star);font:500 .85rem var(--bf);white-space:nowrap;opacity:0;transform:translate(-50%,-135%);transition:opacity .15s}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);z-index:30;opacity:0;pointer-events:none;padding:10px 18px;border-radius:12px;background:rgba(15,31,92,.96);border:1px solid var(--blue);box-shadow:0 0 24px var(--glow);transition:.3s}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.sp{position:fixed;z-index:25;width:5px;height:5px;margin:-2px;border-radius:50%;background:var(--ice);box-shadow:0 0 8px var(--blue);pointer-events:none;animation:spark .65s ease-out forwards}
+@keyframes spark{to{transform:translate(var(--dx),var(--dy)) scale(.2);opacity:0}}
+@media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.cont{grid-template-columns:1fr}.cont a,.cont button{width:100%}}
+@media(max-width:480px){header{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}header a,header b{white-space:nowrap;flex:none}main{padding:20px 14px 70px}header{padding:8px 12px}.stats{gap:10px}.stat{padding:14px}.stat .big{font-size:1.5rem}.grid{grid-template-columns:1fr}.hero h1{font-size:2.1rem}}
+</style></head><body><div id="sky" aria-hidden="true"><div class="neb"></div><div class="mw"></div><div class="st st1"></div><div class="st st2"></div><div class="st st3"></div><div class="shoot sh1"></div><div class="shoot sh2"></div></div><div id="tip"></div><div id="toast" role="status"></div>
+<header><b>🌌 Roadmap Galaxy</b><a href="#dashboard" data-v="dashboard">Dashboard</a><a href="#roadmaps" data-v="roadmaps">Roadmap Library</a><a href="#hackathon-ideas" data-v="hackathon-ideas">Hackathon Idea Lab</a><a href="#plans" data-v="plans">My Plans</a></header>
+<main id="app"></main>
+<script>
+// ---------- Static catalogue (version-controlled; topic IDs = roadmapId-N, never reorder, only append) ----------
+const CATS=["Computer Science Fundamentals","Programming Languages","Software Development","AI and Data","Cybersecurity and Blockchain","Cloud and DevOps","Emerging Technologies","Electronics and Electrical","Mechanical Engineering","Civil Engineering","Other Professional Skills"];
+// [id,title,cat,difficulty,duration,description,prereqs,topics,skills,project,interests]
+const R=[
+["python","Python Programming",CATS[1],"Beginner","6-8 weeks","Core Python from syntax to modules, files and testing.",[],["Syntax, variables and types","Control flow","Functions and scope","Lists, dicts, sets, tuples","Strings and file I/O","Exceptions","OOP in Python","Modules and virtual environments","Testing with pytest","Working with APIs and JSON"],["Python","Scripting","Testing"],"CLI expense tracker with file storage and tests",["ai","web","data"]],
+["dsa","Data Structures and Algorithms",CATS[0],"Intermediate","12-16 weeks","The foundation for interviews and efficient programs.",["python"],["Complexity analysis","Arrays and strings","Linked lists","Stacks and queues","Hashing","Recursion and backtracking","Trees and BSTs","Heaps","Graphs: BFS/DFS","Sorting and searching","Dynamic programming","Greedy algorithms"],["Problem solving","Algorithm design"],"Visual algorithm explorer web app",["ai","web","sec","data"]],
+["dbms","Database Management Systems",CATS[0],"Intermediate","6-8 weeks","Relational design, SQL and transactions.",[],["ER modelling","Relational model and keys","SQL basics","Joins and subqueries","Normalisation","Indexes","Transactions and ACID","Concurrency control","NoSQL overview","Query optimisation basics"],["SQL","Schema design"],"Library system schema with 10 analytical queries",["web","data"]],
+["frontend","Frontend Development",CATS[2],"Beginner","8-10 weeks","Build accessible, responsive interfaces.",[],["HTML semantics","CSS layout: flexbox and grid","Responsive design","JavaScript fundamentals","DOM and events","Fetch and async","Accessibility basics","A component framework","State management","Build tools and deployment"],["HTML/CSS/JS","Accessibility"],"Responsive portfolio plus a small API-driven app",["web","design"]],
+["backend","Backend Development",CATS[2],"Intermediate","8-10 weeks","Servers, APIs, auth and persistence.",["dbms"],["HTTP and REST","A server framework","Routing and validation","Database integration","Authentication and authorisation","Error handling and logging","Testing APIs","Caching basics","Rate limiting and security","Deployment"],["API design","Auth","Deployment"],"Authenticated REST API with tests and docs",["web","data"]],
+["ml","Machine Learning",CATS[3],"Intermediate","12 weeks","Classical ML with sound evaluation practice.",["python"],["Linear algebra and probability refresher","Data cleaning with pandas","Exploratory analysis","Linear and logistic regression","Trees and ensembles","Model evaluation","Feature engineering","Clustering and PCA","Intro neural networks","Model deployment basics"],["scikit-learn","Evaluation"],"End-to-end prediction project with a documented evaluation",["ai","data"]],
+["genai","Generative AI and LLM Apps",CATS[3],"Intermediate","6-8 weeks","Build applications with language models responsibly.",["python"],["How LLMs work (conceptual)","Prompt design","Structured outputs","Embeddings and vector search","Retrieval-Augmented Generation","Tool use and agents","Evaluation of LLM outputs","Safety and responsible AI","Cost, latency and caching","Shipping an LLM app"],["RAG","Prompting","Evaluation"],"Document Q&A bot with cited answers",["ai"]],
+["cyber","Cybersecurity Fundamentals",CATS[4],"Beginner","8 weeks","Threats, defences and secure habits.",[],["CIA triad and threat modelling","Networking for security","Cryptography basics","Authentication and passwords","OWASP Top 10","Linux hardening","Malware and phishing basics","Logging and monitoring","Incident response","Legal and ethical practice"],["Threat modelling","Secure coding"],"Threat model plus a hardened demo app",["sec"]],
+["devops","Docker and DevOps",CATS[5],"Intermediate","6-8 weeks","Containers, CI/CD and operating services.",[],["Linux and shell","Git workflows","Docker images and Compose","CI pipelines","Automated testing in CI","Deployment strategies","Infrastructure as Code intro","Monitoring and logs","Kubernetes concepts","Incident basics and SRE mindset"],["Docker","CI/CD"],"Containerised app with a CI pipeline",["web","sec"]],
+["iot","IoT and Embedded Systems",CATS[6],"Intermediate","8-10 weeks","Sensors, microcontrollers and connected devices.",[],["Digital electronics refresher","Microcontroller basics in C","GPIO and interrupts","Sensors and ADC","Serial protocols: I2C, SPI, UART","Wireless: Wi-Fi, BLE","MQTT messaging","Cloud dashboards","Power management","Enclosure and field testing"],["C","Sensors","MQTT"],"Sensor node streaming to a live dashboard",["hw"]],
+["control","Control Systems and Robotics",CATS[8],"Advanced","10-12 weeks","Modelling and controlling dynamic systems.",[],["Engineering mechanics review","Laplace transforms","Transfer functions","Time-domain response","Stability analysis","PID control","State-space basics","Kinematics","Sensors and actuators","Simulation in Python or MATLAB"],["Control design","Simulation"],"Simulated PID-controlled robot arm joint",["hw"]],
+["bim","BIM and GIS for Civil Engineers",CATS[9],"Intermediate","8 weeks","Digital tools for modern construction and planning.",[],["Drawing standards","CAD fundamentals","BIM concepts and LOD","Modelling a building","Quantity take-off","Clash detection","GIS basics and coordinate systems","Spatial analysis","Open spatial data","Reporting for stakeholders"],["BIM","GIS"],"Small building model with quantities and a site map",["civil","data"]],
+["uiux","UI/UX Design",CATS[10],"Beginner","6 weeks","User research to tested prototypes (optional exploration).",[],["Design thinking","User research","Personas and journeys","Information architecture","Wireframing","Visual design basics","Prototyping","Usability testing","Accessibility","Design handoff and portfolio"],["Research","Prototyping"],"Case study: redesign of a real app with test findings",["design","web"]]
+];
+const INTERESTS={ai:"AI and ML",web:"Web and apps",sec:"Security",hw:"Hardware and IoT",civil:"Civil and spatial",design:"Design",data:"Data"};
+const BRANCHES=["CSE / IT","ECE","EEE","Mechanical","Civil","Other"];
+// [id,title,cat,diff,team,days,ai,hw,problem,why,solution,mvp,adv,stack,needs(roadmapIds),differentiator,challenges,datasets,demo,interests]
+const I=[
+["career-gap","AI Career Gap Analyser","Artificial Intelligence and Machine Learning","Intermediate","2-4","2 days",1,0,"Students do not know which skills separate them from a target role.","Unfocused learning wastes months and weakens placements.","Compare a student’s skills with a role’s skill list and output a ranked learning path.","Role skill taxonomy, skills input, gap score, ordered learning plan.","LLM-assisted resume parsing, progress tracking over time.","React, FastAPI, PostgreSQL, embeddings",["python","dsa","ml","genai","backend"],"Transparent scoring: every gap shows why it was flagged, rather than a black-box score.","Role taxonomies go stale; needs manual curation.","Check job-skill datasets (e.g. O*NET, ESCO) for licence and fit before use.","Live demo: paste skills, show gap and 4-week plan.",["ai","data"]],
+["campus-bot","Campus Assistant on Verified Documents","Generative AI and Agentic AI","Intermediate","2-3","2 days",1,0,"Students struggle to find rules, deadlines and procedures buried in PDFs.","Wrong answers about exams or fees cause real harm, so answers must be traceable.","RAG chatbot that answers only from uploaded institutional documents and cites the source passage.","Upload PDFs, chunk and embed, answer with citations, refuse when unsupported.","Role-based documents, multilingual answers, feedback loop.","Next.js, Python, vector store, PostgreSQL",["python","genai","backend","dbms"],"Refuses when evidence is missing and always shows the quote it relied on.","Document quality, chunking errors, hallucination risk.","Use the institution’s own documents (needs permission).","Ask three questions, one deliberately unanswerable.",["ai","web"]],
+["phish-edu","Phishing Awareness and URL Risk Trainer","Cybersecurity","Beginner","1-3","1 day",0,0,"People fall for phishing because training is generic and passive.","Phishing is a leading entry point for breaches.","Interactive quiz of realistic (fake) emails and a URL checker that explains red flags using transparent rules.","20 sample emails, rule-based URL checker, score and explanations.","Admin dashboard for organisations, regional-language scenarios.","HTML/JS or React, Node.js, SQLite",["frontend","cyber"],"Explains each red flag instead of just saying safe or unsafe.","Rule-based checks miss novel attacks; say so clearly.","Public phishing feeds exist (e.g. PhishTank); check terms and availability.","Let judges try to fool the trainer.",["sec","web"]],
+["spaced-rep","Spaced-Repetition Study Assistant","Education Technology","Beginner","1-3","1 day",0,0,"Students cram and forget within weeks.","Spaced review is well documented to improve retention.","Flashcards scheduled by a simple SM-2 style algorithm, with import from notes.","Create decks, review queue, scheduling algorithm, streak view.","Auto-generate cards from notes, shared decks.","React, Node.js, PostgreSQL",["python","frontend","dbms"],"Ties card decks to roadmap topics so review follows what you are learning.","Card quality depends on the student.","None required.","Show retention curve across two simulated weeks.",["web","design"]],
+["crop-advisor","Crop Disease Identification and Advisory","Agriculture Technology","Advanced","3-5","3 days",1,0,"Farmers detect plant disease late and lack nearby expert advice.","Early detection reduces crop loss and unnecessary pesticide use.","Photo-based disease classifier with treatment guidance reviewed against agricultural sources.","Image upload, classifier on a few crops, confidence score, advisory text with source.","Offline mobile mode, regional languages, expert review queue.","React Native or PWA, FastAPI, PyTorch/TensorFlow",["python","ml","backend"],"Shows low-confidence cases honestly and routes them to a human expert.","Field images differ from lab images; accuracy claims need care.","Check PlantVillage dataset licence and limitations before use.","Demo on real leaf photos, not only dataset images.",["ai","data"]],
+["smart-water","Smart Water Leakage Monitoring","Smart Cities","Intermediate","3-4","2 days",0,1,"Municipal pipes leak unseen, wasting treated water.","Water loss is costly and scarce in many cities.","Flow sensors on a pipe loop publish data; the dashboard flags anomalies between upstream and downstream readings.","Two flow sensors, MQTT, dashboard with threshold-based alerts.","ML anomaly detection, GIS map of nodes.","ESP32, MQTT, Node.js, InfluxDB or PostgreSQL",["iot","backend","python"],"Physical demo with a controlled leak makes the impact visible.","Sensor calibration and noise; prototype is a model, not a city deployment.","None required.","Open a valve live and show the alert fire.",["hw","data"]],
+["a11y-nav","Voice-Based Navigation Assistant","Accessibility and Assistive Technology","Intermediate","2-4","2 days",0,0,"Visually impaired users find many web pages hard to navigate.","Accessibility is a basic right and often an afterthought.","Browser extension that reads page structure aloud and accepts voice commands to jump between sections.","Landmark detection, speak headings, voice commands for next, back, read.","Image alt-text suggestions, custom command sets.","JavaScript, Web Speech API (check browser support), Chrome extension",["frontend","uiux"],"Built with and tested by assistive-tech users where possible.","Speech APIs vary by browser and language.","None required.","Demo with eyes closed, navigating a real site.",["web","design"]],
+["gh-health","GitHub Repository Health Dashboard","Open Source and Developer Tools","Beginner","1-3","1 day",0,0,"Contributors cannot easily judge whether a project is active and welcoming.","Choosing healthy projects improves first-contribution success.","Dashboard that scores a repository on activity, issue response time and contributor-friendliness using public data.","Enter a repo, fetch stats, show a score breakdown.","Compare repos, trend charts, good-first-issue finder.","React, GitHub REST API (check rate limits), Chart library",["frontend","backend"],"Score formula is shown openly and adjustable.","API rate limits; metrics are proxies, not truth.","GitHub public API; verify current rate limits.","Analyse a repo chosen by a judge.",["web","data"]]
+];
+// ---------- State (localStorage with in-memory fallback) ----------
+let S={done:{},bm:[],plans:[],viewed:[],log:{},focus:[],last:null,prefs:{branch:"CSE / IT",interest:"ai"}};
+try{const x=localStorage.getItem("rg1");if(x)S=Object.assign(S,JSON.parse(x))}catch(e){}
+function save(){try{localStorage.setItem("rg1",JSON.stringify(S))}catch(e){}}
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const rid=id=>R.find(r=>r[0]==id),tid=(r,i)=>r[0]+"-"+(i+1);
+const doneN=r=>r[7].filter((_,i)=>S.done[tid(r,i)]).length,pct=r=>Math.round(100*doneN(r)/r[7].length);
+const bar=p=>`<div class="bar"><i style="width:${p}%"></i></div>`;
+// ---------- Recommendations (deterministic) ----------
+function recRoadmaps(){const k=S.prefs.interest;return R.filter(r=>r[10].includes(k)&&pct(r)<100).sort((a,b)=>pct(b)-pct(a)||a[3].localeCompare(b[3])).slice(0,3)}
+function ideaScore(x){const need=x[14];const sk=need.reduce((s,id)=>s+pct(rid(id)),0)/need.length/100;return sk*0.7+(x[19].includes(S.prefs.interest)?0.3:0)}
+const ranked=()=>[...I].sort((a,b)=>ideaScore(b)-ideaScore(a));
+function ideaCard(x){const m=Math.round(ideaScore(x)*100);return `<div class="card"><h3><a href="#idea-${x[0]}">${x[1]}</a></h3><div class="mut">${x[2]}</div><div><span class="tag">${x[3]}</span><span class="tag">${x[5]}</span><span class="tag">team ${x[4]}</span><span class="tag">${x[7]?"hardware+software":"software"}</span>${x[6]?'<span class="tag">AI</span>':""}</div><p class="mut">${x[8]}</p><div class="mut">Match <span class="mono">${m}%</span> · Buildability <span class="mono">${build(x).pct}%</span></div>${bar(build(x).pct)}</div>`}
+const WT={Beginner:10,Intermediate:15,Advanced:20};
+const ld=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const RANKS=[["Cadet",0],["Navigator",100],["Pilot",300],["Commander",700],["Admiral",1500]];
+function xp(){let t=0;R.forEach(r=>r[7].forEach((_,i)=>{if(S.done[tid(r,i)])t+=WT[r[3]]}));return t}
+function rank(x){let k=0;RANKS.forEach((r,i)=>{if(x>=r[1])k=i});return{n:RANKS[k][0],next:RANKS[k+1]}}
+function wprog(){let d=0,t=0,dn=0,tn=0;R.forEach(r=>r[7].forEach((_,i)=>{const w=WT[r[3]];t+=w;tn++;if(S.done[tid(r,i)]){d+=w;dn++}}));return{p:t?Math.round(100*d/t):0,dn,tn}}
+function streak(){const ds=new Set([...Object.values(S.log),...S.focus.map(f=>f.d)]);let n=0,d=new Date();if(!ds.has(ld(d)))d.setDate(d.getDate()-1);while(ds.has(ld(d))){n++;d.setDate(d.getDate()-1)}return n}
+const nextIdx=r=>r[7].findIndex((_,i)=>!S.done[tid(r,i)]);
+function build(x){let d=0,t=0;x[14].forEach(id=>{const r=rid(id);d+=doneN(r);t+=r[7].length});return{d,t,pct:t?Math.round(100*d/t):0}}
+function buildBox(x){const b=build(x);return `<h2>Buildability Score</h2><div class="card expl"><div class="big mono" style="font-size:1.8rem">${b.pct}%</div><p><span class="mono">${b.d}</span> of <span class="mono">${b.t}</span> topics completed across the <span class="mono">${x[14].length}</span> roadmaps this project needs.</p><p class="mut">Formula: completed required topics ÷ total required topics. It shows how much of the suggested learning you have done. It does not block you from starting, and it is not a prediction of success.</p></div>`}
+const BUILD_NOTE="Buildability = completed topics ÷ total topics in the roadmaps an idea needs. Match = 70% skills (average roadmap completion) + 30% interest.";
+const FEAT=()=>I[Math.floor(Date.now()/864e5)%I.length];
+const bestOf=d=>{const l=I.filter(x=>x[3]==d),pl=l.length?l:I.filter(x=>x[3]=="Intermediate");return [...pl].sort((a,b)=>build(b).pct-build(a).pct)[0]};
+const spot=(l,x)=>x?`<div><div class="kick">${l}</div>${ideaCard(x)}</div>`:"";
+const ICO={};[["Σ"],["{ }"],["</>"],["✧"],["◈"],["⬡"],["◎"],["⌁"],["⚙\uFE0E"],["▥"],["✦"]].forEach((g,i)=>ICO[CATS[i]]=g[0]);
+const dots=d=>{const n={Beginner:1,Intermediate:2,Advanced:3}[d];return `<span class="dots" title="${d}">${[1,2,3].map(k=>`<i class="${k<=n?"on":""}"></i>`).join("")}</span>`};
+function roadCard(r){const p=pct(r),n=doneN(r),ni=nextIdx(r);return `<div class="card rc"><div class="rh"><span class="ico" aria-hidden="true">${ICO[r[2]]||"✦"}</span><div><h3><a href="#roadmap-${r[0]}">${r[1]}</a></h3><div class="mut">${r[2]}</div></div></div><div class="meta">${dots(r[3])}<span class="mut">${r[3]}</span><span class="tag">${r[4]}</span>${r[3]=="Beginner"?'<span class="tag">beginner-friendly</span>':""}</div><p class="mut">${r[5]}</p><div class="mut"><span class="mono">${n}/${r[7].length}</span> topics completed · <span class="mono">${p}%</span></div>${bar(p)}<a href="#roadmap-${r[0]}"${n?` data-res="${tid(r,ni>=0?ni:0)}"`:""}><button class="p">${p==100?"Review":p?"Continue Learning":"Start Learning"}</button></a></div>`}
+function stats(){const w=wprog(),x=xp(),rk=rank(x),st=streak(),h=S.focus.reduce((a,f)=>a+f.s,0)/3600;
+const c=(k,v,sub,ex="")=>`<div class="card stat"><div class="kick">${k}</div><div class="big mono">${v}</div><div class="mut">${sub}</div>${ex}</div>`;
+return `<h2>Mission Control</h2><div class="stats">${c("Weighted progress",w.p+"%",w.dn?`${w.dn} of ${w.tn} topics · harder topics weigh more`:"No topics completed yet",bar(w.p))}${c("XP · Rank",x+" XP",rk.n+(rk.next?` · ${rk.next[1]-x} XP to ${rk.next[0]}`:" · top rank"))}${c("Learning streak",st+(st==1?" day":" days"),st?"Keep it going today":"Complete a topic or focus session to start")}${c("Focus time",h.toFixed(1)+" h",S.focus.length?`${S.focus.length} session${S.focus.length>1?"s":""} logged`:"Start a focus session on any roadmap")}</div><p class="mut">XP is 10, 15 or 20 per topic (Beginner, Intermediate, Advanced). Streak counts days with a dated completion or focus session. Topics completed before dating began count for progress and XP only.</p>`}
+function cont(){const id=S.viewed[0]||(S.last&&S.last.r),r=id&&rid(id);
+if(!r){const s=recRoadmaps()[0]||R[0];return `<h2>Continue Learning</h2><div class="card cont"><div><h3>Start Your First Roadmap</h3><p class="mut">Pick a path and tick off topics. Your progress, XP, streak and next step will appear here.</p></div><a href="#roadmap-${s[0]}"><button class="sun">Start ${s[1]}</button></a></div>`}
+const p=pct(r),ni=nextIdx(r),lt=S.last&&S.last.r==r[0]?r[7][S.last.i]:null;
+return `<h2>Continue Learning</h2><div class="card cont"><div><div class="kick">Last accessed</div><h3>${r[1]}</h3><div class="mut"><span class="mono">${doneN(r)}/${r[7].length}</span> topics · <span class="mono">${p}%</span> complete</div>${bar(p)}<div class="mut">Last studied: <b>${lt||"nothing yet in this roadmap"}</b></div><div class="mut">Next up: <b>${ni>=0?r[7][ni]:"all topics complete"}</b></div></div><a href="#roadmap-${r[0]}"${ni>=0?` data-res="${tid(r,ni)}"`:""}><button class="sun">${ni>=0?"Resume Learning":"Review roadmap"}</button></a></div>`}
+function orrery(){const ov=wprog().p,rings=[[0,4,"o1"],[4,9,"o2"],[9,13,"o3"]];
+return `<div class="orw"><div class="orrery"><a class="sunb" href="#roadmaps" data-tip="Your learning universe · ${ov}% overall" aria-label="Open the Roadmap Library"></a>${rings.map(([a,b,c])=>{const L=R.slice(a,b);return `<div class="orb ${c}">${L.map((r,k)=>{const an=2*Math.PI*k/L.length,p=pct(r);return `<a class="pl" href="#roadmap-${r[0]}" data-tip="${r[1]} · ${p}%" aria-label="${r[1]}, ${p}% complete" style="left:${(50+50*Math.cos(an)).toFixed(1)}%;top:${(50+50*Math.sin(an)).toFixed(1)}%;--g:${(p/100).toFixed(2)}"></a>`}).join("")}</div>`}).join("")}</div><p class="mut hint">Hover or tap a planet to open its roadmap. A brighter glow means more complete.</p></div>`}
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(window._tt);window._tt=setTimeout(()=>t.classList.remove("show"),2400)}
+function burst(el){const b=el.getBoundingClientRect();for(let k=0;k<10;k++){const e=document.createElement("span"),a=k/10*6.283,d=24+Math.random()*16;e.className="sp";e.style.cssText=`left:${b.left+b.width/2}px;top:${b.top+b.height/2}px;--dx:${Math.cos(a)*d}px;--dy:${Math.sin(a)*d}px`;document.body.appendChild(e);setTimeout(()=>e.remove(),700)}}
+const fsLabel=()=>window._fs?"■ Stop focus session":"▶ Start focus session";
+// ---------- Views ----------
+const V={};
+V.dashboard=()=>{const pr=S.prefs,rs=recRoadmaps(),rk=ranked(),beg=rk.find(x=>x[3]=="Beginner"),adv=[...rk].reverse().find(x=>x[3]!="Beginner"),best=rk[0];
+const rec=[...new Set([best,beg,adv].filter(Boolean))];
+const viewed=S.viewed.map(rid).filter(Boolean).slice(0,2);
+return `<section class="hero"><div><span class="kick">Your learning universe</span><h1>Welcome back</h1><p>Chart a path from your first topic to a finished project.</p><a href="#hackathon-ideas"><button class="p">Explore the Hackathon Idea Lab</button></a></div>${orrery()}</section>${stats()}${cont()}<div class="row"><label class="mut">Branch <select id="br">${BRANCHES.map(b=>`<option ${b==pr.branch?"selected":""}>${b}</option>`).join("")}</select></label><label class="mut">Interest <select id="in">${Object.entries(INTERESTS).map(([k,v])=>`<option value="${k}" ${k==pr.interest?"selected":""}>${v}</option>`).join("")}</select></label></div>
+<p class="mut">Suggestions only. Every roadmap and idea stays open to everyone.</p>
+<h2>Explore More Roadmaps</h2><div class="grid">${rs.map(roadCard).join("")}</div>${viewed.length?`<h2>Recently viewed</h2><div class="grid">${viewed.map(roadCard).join("")}</div>`:""}<p><a href="#roadmaps">Explore All Roadmaps →</a></p>
+<h2>Hackathon Ideas for You</h2><div class="mut">Best match, a beginner-friendly pick and a challenge.</div><div class="grid">${rec.map(ideaCard).join("")}</div><p><a href="#hackathon-ideas">Explore the Hackathon Idea Lab →</a></p>`};
+V.roadmaps=()=>{const f=window.RF||{q:"",c:"",d:"",i:""};
+const list=R.filter(r=>(!f.q||(r[1]+r[5]).toLowerCase().includes(f.q.toLowerCase()))&&(!f.c||r[2]==f.c)&&(!f.d||r[3]==f.d)&&(!f.i||r[10].includes(f.i)));
+return `<h1>Roadmap Library</h1><p class="mut">${R.length} curated roadmaps in this starter catalogue. New ones are added as data, with no code changes.</p><div class="row"><input id="rq" placeholder="Search roadmaps" value="${esc(f.q)}"><select id="rc"><option value="">All categories</option>${CATS.map(c=>`<option ${c==f.c?"selected":""}>${c}</option>`).join("")}</select><select id="rd"><option value="">Any difficulty</option>${["Beginner","Intermediate","Advanced"].map(c=>`<option ${c==f.d?"selected":""}>${c}</option>`).join("")}</select><select id="ri"><option value="">Any career interest</option>${Object.entries(INTERESTS).map(([k,v])=>`<option value="${k}" ${k==f.i?"selected":""}>${v}</option>`).join("")}</select></div>
+<div class="grid">${list.map(roadCard).join("")||"<p>No roadmaps match.</p>"}</div>`};
+V.roadmap=id=>{const r=rid(id);if(!r)return"<p>Roadmap not found.</p>";S.viewed=[id,...S.viewed.filter(v=>v!=id)].slice(0,6);save();
+return `<a href="#roadmaps">← Library</a><h1>${r[1]}</h1><div class="mut">${r[2]} · ${r[3]} · ${r[4]}</div><p>${r[5]}</p><div>${bar(pct(r))}</div><div class="row"><span class="mut"><span class="mono">${doneN(r)}/${r[7].length}</span> topics completed</span><button class="p" id="fs" data-r="${id}">${fsLabel()}</button></div>
+<p class="mut">Prerequisites: ${r[6].map(p=>`<a href="#roadmap-${p}">${rid(p)[1]}</a>`).join(", ")||"none"} (advisory, not required)</p>
+<ul class="t">${r[7].map((t,i)=>`<li id="${tid(r,i)}" class="${i==nextIdx(r)?"nx":""}"><label><input type="checkbox" data-t="${tid(r,i)}" ${S.done[tid(r,i)]?"checked":""}> ${i+1}. ${t}</label></li>`).join("")}</ul>
+<p>${r[8].map(s=>`<span class="tag">${s}</span>`).join("")}</p><div class="card"><b>Portfolio project</b><br>${r[9]}</div>
+<p class="mut">Learning resources: not listed here yet. Only add links you have verified.</p>`};
+V["hackathon-ideas"]=()=>{const f=window.IF||{q:"",c:"",d:"",t:"",a:""};
+const list=I.filter(x=>(!f.q||(x[1]+x[8]+x[13]).toLowerCase().includes(f.q.toLowerCase()))&&(!f.c||x[2]==f.c)&&(!f.d||x[3]==f.d)&&(!f.t||(f.t=="hw")==!!x[7])&&(!f.a||(f.a=="ai")==!!x[6]));
+const cats=[...new Set(I.map(x=>x[2]))];
+return `<h1>Hackathon Idea Lab</h1><p class="mut">General project ideas, not live competitions. Always check an event’s official page for dates and rules.</p>
+<div class="row"><input id="iq" placeholder="Search ideas" value="${esc(f.q)}"><select id="ic"><option value="">All domains</option>${cats.map(c=>`<option ${c==f.c?"selected":""}>${c}</option>`).join("")}</select><select id="id"><option value="">Any difficulty</option>${["Beginner","Intermediate","Advanced"].map(c=>`<option ${c==f.d?"selected":""}>${c}</option>`).join("")}</select><select id="it"><option value="">Software or hardware</option><option value="sw" ${f.t=="sw"?"selected":""}>Software only</option><option value="hw" ${f.t=="hw"?"selected":""}>Hardware + software</option></select><select id="ia"><option value="">AI or not</option><option value="ai" ${f.a=="ai"?"selected":""}>AI-based</option><option value="no" ${f.a=="no"?"selected":""}>Non-AI</option></select><button class="sun" id="sur">🎲 Surprise Me</button></div>
+<div class="row"><a href="#plans"><button>★ Saved Ideas <span class="mono">${S.bm.length}</span></button></a><a href="#plans"><button>My Project Plans <span class="mono">${S.plans.length}</span></button></a></div><div class="card expl"><b>How scores work.</b> <span class="mut">${BUILD_NOTE}</span></div><h2>Spotlight</h2><div class="grid">${spot("Featured idea",FEAT())}${spot("Best match for my skills",ranked()[0])}${spot("Beginner challenge",bestOf("Beginner"))}${spot("Advanced challenge",bestOf("Advanced"))}</div><h2>Best for My Skills</h2><div class="grid">${ranked().slice(0,3).map(ideaCard).join("")}</div><h2>All ideas (${list.length})</h2><div class="grid">${list.map(ideaCard).join("")||"<p>No ideas match.</p>"}</div>`};
+V.idea=id=>{const x=I.find(i=>i[0]==id);if(!x)return"<p>Idea not found.</p>";const saved=S.bm.includes(id);
+const sec=(h,b)=>`<h2>${h}</h2><p>${b}</p>`;
+return `<a href="#hackathon-ideas">← Idea Lab</a><h1>${x[1]}</h1><div class="mut">${x[2]} · ${x[3]} · team ${x[4]} · prototype ~${x[5]}</div>
+<div class="row"><button id="bm">${saved?"★ Saved (remove)":"☆ Save idea"}</button><button class="sun" id="mk" data-i="${id}">Create project plan</button></div>
+${sec("Problem",x[8])}${sec("Why it matters",x[9])}${sec("Proposed solution",x[10])}${sec("MVP scope (required)",x[11])}${sec("Advanced features (optional)",x[12])}${sec("Suggested stack",x[13])}${sec("What makes it different",x[15])}${sec("Challenges and limitations",x[16])}${sec("Datasets / APIs (verify before relying on them)",x[17])}${sec("Demo suggestion",x[18])}
+${buildBox(x)}<h2>Skills from your roadmaps</h2><p class="mut">Informative only. You can start this project any time.</p><div class="grid">${x[14].map(rd=>{const r=rid(rd),p=pct(r),next=r[7].findIndex((_,i)=>!S.done[tid(r,i)]);return `<div class="card"><b><a href="#roadmap-${rd}">${r[1]}</a></b>${bar(p)}<span class="mut"><span class="mono">${p}%</span> done${next>=0?` · next: ${r[7][next]}`:" · complete"}</span></div>`}).join("")}</div>`};
+V.plans=()=>`<h1>My Hackathon Plans</h1>${S.bm.length?`<h2>Saved ideas</h2><div class="grid">${S.bm.map(b=>I.find(i=>i[0]==b)).filter(Boolean).map(ideaCard).join("")}</div>`:""}
+${S.plans.length?S.plans.map((p,pi)=>{const d=p.tasks.filter(t=>t.s==2).length,pc=Math.round(100*d/p.tasks.length);return `<div class="card" style="margin:12px 0"><div class="row"><input data-pf="name" data-p="${pi}" value="${esc(p.name)}"><input data-pf="team" data-p="${pi}" placeholder="Team members" value="${esc(p.team)}"><input data-pf="stack" data-p="${pi}" placeholder="Tech stack" value="${esc(p.stack)}"></div><div class="mut">Idea: ${esc((I.find(i=>i[0]==p.idea)||[0,p.idea])[1])} · <span class="mono">${pc}%</span></div>${bar(pc)}<ul class="t">${p.tasks.map((t,ti)=>`<li><span class="lnk s${t.s}" data-ts="${pi},${ti}">${["○ Not started","◐ In progress","● Completed"][t.s]}</span> — ${t.t}</li>`).join("")}</ul><textarea data-pf="notes" data-p="${pi}" rows="2" style="width:100%" placeholder="Notes">${esc(p.notes)}</textarea><div class="row"><button data-del="${pi}">Delete plan</button></div></div>`}).join(""):"<p>No plans yet. Open an idea and choose Create project plan.</p>"}`;
+// ---------- Router ----------
+function route(keep){const h=(location.hash||"#dashboard").slice(1);let v=h,html;
+if(h.startsWith("roadmap-")){html=V.roadmap(h.slice(8));v="roadmaps"}else if(h.startsWith("idea-")){html=V.idea(h.slice(5));v="hackathon-ideas"}else html=(V[h]||V.dashboard)();
+$("#app").innerHTML=html;document.querySelectorAll("header a").forEach(a=>a.classList.toggle("on",a.dataset.v==v));window.scrollTo(0,0);$("#app").classList.toggle("nav",!keep);bind();if(window._res){const e=document.getElementById(window._res);window._res=0;if(e)e.scrollIntoView({block:"center"})}}
+function rerenderKeep(){const a=document.activeElement.id,p=document.activeElement.selectionStart;const y=scrollY;route(true);scrollTo(0,y);const e=a&&document.getElementById(a);if(e){e.focus();try{e.setSelectionRange(p,p)}catch(_){}}}
+function bind(){const g=id=>document.getElementById(id);
+document.querySelectorAll("[data-res]").forEach(a=>a.onclick=()=>{window._res=a.dataset.res});
+if(g("fs"))g("fs").onclick=()=>{if(window._fs){const sec=Math.min(10800,Math.round((Date.now()-window._fs.t)/1000));if(sec>=30){S.focus.push({d:ld(new Date()),s:sec,r:window._fs.r});toast("Logged "+Math.max(1,Math.round(sec/60))+" min of focus")}else toast("Sessions under 30 s are not logged");window._fs=0;save()}else window._fs={t:Date.now(),r:g("fs").dataset.r};rerenderKeep()};
+if(g("br"))g("br").onchange=e=>{S.prefs.branch=e.target.value;save()};if(g("in"))g("in").onchange=e=>{S.prefs.interest=e.target.value;save();route()};
+if(g("rq")){const u=()=>{window.RF={q:g("rq").value,c:g("rc").value,d:g("rd").value,i:g("ri").value};rerenderKeep()};["rq","rc","rd","ri"].forEach(i=>g(i).oninput=u)}
+if(g("iq")){const u=()=>{window.IF={q:g("iq").value,c:g("ic").value,d:g("id").value,t:g("it").value,a:g("ia").value};rerenderKeep()};["iq","ic","id","it","ia"].forEach(i=>g(i).oninput=u)}
+if(g("sur"))g("sur").onclick=()=>{location.hash="idea-"+I[Math.floor(Math.random()*I.length)][0]};
+document.querySelectorAll("[data-t]").forEach(c=>c.onchange=()=>{const t=c.dataset.t,k=t.lastIndexOf("-");if(c.checked){S.done[t]=1;S.log[t]=ld(new Date());const rr=rid(t.slice(0,k));S.last={r:rr[0],i:+t.slice(k+1)-1};burst(c);S.done[t]&&toast(pct(rr)==100?"Roadmap complete: "+rr[1]:"+"+WT[rr[3]]+" XP")}else{delete S.done[t];delete S.log[t]}save();rerenderKeep()});
+if(g("bm"))g("bm").onclick=()=>{const id=location.hash.slice(6);S.bm=S.bm.includes(id)?S.bm.filter(b=>b!=id):[...S.bm,id];save();route()};
+if(g("mk"))g("mk").onclick=()=>{const x=I.find(i=>i[0]==g("mk").dataset.i);S.plans.unshift({idea:x[0],name:x[1],team:"",stack:x[13],notes:"",tasks:["Problem understanding","Research","Requirements","UI/UX design","Architecture","Development","Testing","Presentation","Final submission"].map(t=>({t,s:0}))});save();location.hash="plans"};
+document.querySelectorAll("[data-ts]").forEach(e=>e.onclick=()=>{const[a,b]=e.dataset.ts.split(",");const t=S.plans[a].tasks[b];t.s=(t.s+1)%3;save();route()});
+document.querySelectorAll("[data-pf]").forEach(e=>e.oninput=()=>{S.plans[e.dataset.p][e.dataset.pf]=e.value;save()});
+document.querySelectorAll("[data-del]").forEach(e=>e.onclick=()=>{S.plans.splice(e.dataset.del,1);save();route()})}
+const tip=$("#tip"),showTip=e=>{const t=e.target.closest&&e.target.closest("[data-tip]");if(!t)return;const b=t.getBoundingClientRect();tip.textContent=t.dataset.tip;tip.style.left=Math.min(Math.max(b.left+b.width/2,80),innerWidth-80)+"px";tip.style.top=b.top+"px";tip.style.opacity=1},hideTip=()=>{tip.style.opacity=0};
+document.addEventListener("mouseover",showTip);document.addEventListener("focusin",showTip);document.addEventListener("mouseout",hideTip);document.addEventListener("focusout",hideTip);
+setInterval(()=>{const b=document.getElementById("fs");if(b&&window._fs){const q=Math.floor((Date.now()-window._fs.t)/1000);b.textContent="■ Stop · "+String(Math.floor(q/60)).padStart(2,"0")+":"+String(q%60).padStart(2,"0")}},1000);
+addEventListener("hashchange",()=>{hideTip();route()});route();
+</script></body></html>

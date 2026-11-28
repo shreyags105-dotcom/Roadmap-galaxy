@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "source": "reference/roadmap-galaxy.prototype.html",
+    "sourceSha256": "a6f4e437dac24f537a006ec2887cf84869131a4cca543f69012f5273af2eacf9"
+  },
+  "categories": [
+    "Computer Science Fundamentals",
+    "Programming Languages",
+    "Software Development",
+    "AI and Data",
+    "Cybersecurity and Blockchain",
+    "Cloud and DevOps",
+    "Emerging Technologies",
+    "Electronics and Electrical",
+    "Mechanical Engineering",
+    "Civil Engineering",
+    "Other Professional Skills"
+  ],
+  "interests": {
+    "ai": "AI and ML",
+    "web": "Web and apps",
+    "sec": "Security",
+    "hw": "Hardware and IoT",
+    "civil": "Civil and spatial",
+    "design": "Design",
+    "data": "Data"
+  },
+  "branches": [
+    "CSE / IT",
+    "ECE",
+    "EEE",
+    "Mechanical",
+    "Civil",
+    "Other"
+  ],
+  "levels": [
+    "Beginner",
+    "Intermediate",
+    "Advanced"
+  ]
+}

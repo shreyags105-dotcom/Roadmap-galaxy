@@ -1,0 +1,241 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "source": "reference/roadmap-galaxy.prototype.html",
+    "sourceSha256": "a6f4e437dac24f537a006ec2887cf84869131a4cca543f69012f5273af2eacf9"
+  },
+  "ideas": [
+    {
+      "ideaId": "career-gap",
+      "title": "AI Career Gap Analyser",
+      "category": "Artificial Intelligence and Machine Learning",
+      "difficulty": "Intermediate",
+      "teamSize": "2-4",
+      "prototypeDuration": "2 days",
+      "isAI": true,
+      "isHardware": false,
+      "problem": "Students do not know which skills separate them from a target role.",
+      "whyItMatters": "Unfocused learning wastes months and weakens placements.",
+      "solution": "Compare a student’s skills with a role’s skill list and output a ranked learning path.",
+      "mvpScope": "Role skill taxonomy, skills input, gap score, ordered learning plan.",
+      "advancedFeatures": "LLM-assisted resume parsing, progress tracking over time.",
+      "suggestedStack": "React, FastAPI, PostgreSQL, embeddings",
+      "requiredRoadmaps": [
+        "python",
+        "dsa",
+        "ml",
+        "genai",
+        "backend"
+      ],
+      "differentiator": "Transparent scoring: every gap shows why it was flagged, rather than a black-box score.",
+      "challenges": "Role taxonomies go stale; needs manual curation.",
+      "datasetsNote": "Check job-skill datasets (e.g. O*NET, ESCO) for licence and fit before use.",
+      "demoSuggestion": "Live demo: paste skills, show gap and 4-week plan.",
+      "interests": [
+        "ai",
+        "data"
+      ]
+    },
+    {
+      "ideaId": "campus-bot",
+      "title": "Campus Assistant on Verified Documents",
+      "category": "Generative AI and Agentic AI",
+      "difficulty": "Intermediate",
+      "teamSize": "2-3",
+      "prototypeDuration": "2 days",
+      "isAI": true,
+      "isHardware": false,
+      "problem": "Students struggle to find rules, deadlines and procedures buried in PDFs.",
+      "whyItMatters": "Wrong answers about exams or fees cause real harm, so answers must be traceable.",
+      "solution": "RAG chatbot that answers only from uploaded institutional documents and cites the source passage.",
+      "mvpScope": "Upload PDFs, chunk and embed, answer with citations, refuse when unsupported.",
+      "advancedFeatures": "Role-based documents, multilingual answers, feedback loop.",
+      "suggestedStack": "Next.js, Python, vector store, PostgreSQL",
+      "requiredRoadmaps": [
+        "python",
+        "genai",
+        "backend",
+        "dbms"
+      ],
+      "differentiator": "Refuses when evidence is missing and always shows the quote it relied on.",
+      "challenges": "Document quality, chunking errors, hallucination risk.",
+      "datasetsNote": "Use the institution’s own documents (needs permission).",
+      "demoSuggestion": "Ask three questions, one deliberately unanswerable.",
+      "interests": [
+        "ai",
+        "web"
+      ]
+    },
+    {
+      "ideaId": "phish-edu",
+      "title": "Phishing Awareness and URL Risk Trainer",
+      "category": "Cybersecurity",
+      "difficulty": "Beginner",
+      "teamSize": "1-3",
+      "prototypeDuration": "1 day",
+      "isAI": false,
+      "isHardware": false,
+      "problem": "People fall for phishing because training is generic and passive.",
+      "whyItMatters": "Phishing is a leading entry point for breaches.",
+      "solution": "Interactive quiz of realistic (fake) emails and a URL checker that explains red flags using transparent rules.",
+      "mvpScope": "20 sample emails, rule-based URL checker, score and explanations.",
+      "advancedFeatures": "Admin dashboard for organisations, regional-language scenarios.",
+      "suggestedStack": "HTML/JS or React, Node.js, SQLite",
+      "requiredRoadmaps": [
+        "frontend",
+        "cyber"
+      ],
+      "differentiator": "Explains each red flag instead of just saying safe or unsafe.",
+      "challenges": "Rule-based checks miss novel attacks; say so clearly.",
+      "datasetsNote": "Public phishing feeds exist (e.g. PhishTank); check terms and availability.",
+      "demoSuggestion": "Let judges try to fool the trainer.",
+      "interests": [
+        "sec",
+        "web"
+      ]
+    },
+    {
+      "ideaId": "spaced-rep",
+      "title": "Spaced-Repetition Study Assistant",
+      "category": "Education Technology",
+      "difficulty": "Beginner",
+      "teamSize": "1-3",
+      "prototypeDuration": "1 day",
+      "isAI": false,
+      "isHardware": false,
+      "problem": "Students cram and forget within weeks.",
+      "whyItMatters": "Spaced review is well documented to improve retention.",
+      "solution": "Flashcards scheduled by a simple SM-2 style algorithm, with import from notes.",
+      "mvpScope": "Create decks, review queue, scheduling algorithm, streak view.",
+      "advancedFeatures": "Auto-generate cards from notes, shared decks.",
+      "suggestedStack": "React, Node.js, PostgreSQL",
+      "requiredRoadmaps": [
+        "python",
+        "frontend",
+        "dbms"
+      ],
+      "differentiator": "Ties card decks to roadmap topics so review follows what you are learning.",
+      "challenges": "Card quality depends on the student.",
+      "datasetsNote": "None required.",
+      "demoSuggestion": "Show retention curve across two simulated weeks.",
+      "interests": [
+        "web",
+        "design"
+      ]
+    },
+    {
+      "ideaId": "crop-advisor",
+      "title": "Crop Disease Identification and Advisory",
+      "category": "Agriculture Technology",
+      "difficulty": "Advanced",
+      "teamSize": "3-5",
+      "prototypeDuration": "3 days",
+      "isAI": true,
+      "isHardware": false,
+      "problem": "Farmers detect plant disease late and lack nearby expert advice.",
+      "whyItMatters": "Early detection reduces crop loss and unnecessary pesticide use.",
+      "solution": "Photo-based disease classifier with treatment guidance reviewed against agricultural sources.",
+      "mvpScope": "Image upload, classifier on a few crops, confidence score, advisory text with source.",
+      "advancedFeatures": "Offline mobile mode, regional languages, expert review queue.",
+      "suggestedStack": "React Native or PWA, FastAPI, PyTorch/TensorFlow",
+      "requiredRoadmaps": [
+        "python",
+        "ml",
+        "backend"
+      ],
+      "differentiator": "Shows low-confidence cases honestly and routes them to a human expert.",
+      "challenges": "Field images differ from lab images; accuracy claims need care.",
+      "datasetsNote": "Check PlantVillage dataset licence and limitations before use.",
+      "demoSuggestion": "Demo on real leaf photos, not only dataset images.",
+      "interests": [
+        "ai",
+        "data"
+      ]
+    },
+    {
+      "ideaId": "smart-water",
+      "title": "Smart Water Leakage Monitoring",
+      "category": "Smart Cities",
+      "difficulty": "Intermediate",
+      "teamSize": "3-4",
+      "prototypeDuration": "2 days",
+      "isAI": false,
+      "isHardware": true,
+      "problem": "Municipal pipes leak unseen, wasting treated water.",
+      "whyItMatters": "Water loss is costly and scarce in many cities.",
+      "solution": "Flow sensors on a pipe loop publish data; the dashboard flags anomalies between upstream and downstream readings.",
+      "mvpScope": "Two flow sensors, MQTT, dashboard with threshold-based alerts.",
+      "advancedFeatures": "ML anomaly detection, GIS map of nodes.",
+      "suggestedStack": "ESP32, MQTT, Node.js, InfluxDB or PostgreSQL",
+      "requiredRoadmaps": [
+        "iot",
+        "backend",
+        "python"
+      ],
+      "differentiator": "Physical demo with a controlled leak makes the impact visible.",
+      "challenges": "Sensor calibration and noise; prototype is a model, not a city deployment.",
+      "datasetsNote": "None required.",
+      "demoSuggestion": "Open a valve live and show the alert fire.",
+      "interests": [
+        "hw",
+        "data"
+      ]
+    },
+    {
+      "ideaId": "a11y-nav",
+      "title": "Voice-Based Navigation Assistant",
+      "category": "Accessibility and Assistive Technology",
+      "difficulty": "Intermediate",
+      "teamSize": "2-4",
+      "prototypeDuration": "2 days",
+      "isAI": false,
+      "isHardware": false,
+      "problem": "Visually impaired users find many web pages hard to navigate.",
+      "whyItMatters": "Accessibility is a basic right and often an afterthought.",
+      "solution": "Browser extension that reads page structure aloud and accepts voice commands to jump between sections.",
+      "mvpScope": "Landmark detection, speak headings, voice commands for next, back, read.",
+      "advancedFeatures": "Image alt-text suggestions, custom command sets.",
+      "suggestedStack": "JavaScript, Web Speech API (check browser support), Chrome extension",
+      "requiredRoadmaps": [
+        "frontend",
+        "uiux"
+      ],
+      "differentiator": "Built with and tested by assistive-tech users where possible.",
+      "challenges": "Speech APIs vary by browser and language.",
+      "datasetsNote": "None required.",
+      "demoSuggestion": "Demo with eyes closed, navigating a real site.",
+      "interests": [
+        "web",
+        "design"
+      ]
+    },
+    {
+      "ideaId": "gh-health",
+      "title": "GitHub Repository Health Dashboard",
+      "category": "Open Source and Developer Tools",
+      "difficulty": "Beginner",
+      "teamSize": "1-3",
+      "prototypeDuration": "1 day",
+      "isAI": false,
+      "isHardware": false,
+      "problem": "Contributors cannot easily judge whether a project is active and welcoming.",
+      "whyItMatters": "Choosing healthy projects improves first-contribution success.",
+      "solution": "Dashboard that scores a repository on activity, issue response time and contributor-friendliness using public data.",
+      "mvpScope": "Enter a repo, fetch stats, show a score breakdown.",
+      "advancedFeatures": "Compare repos, trend charts, good-first-issue finder.",
+      "suggestedStack": "React, GitHub REST API (check rate limits), Chart library",
+      "requiredRoadmaps": [
+        "frontend",
+        "backend"
+      ],
+      "differentiator": "Score formula is shown openly and adjustable.",
+      "challenges": "API rate limits; metrics are proxies, not truth.",
+      "datasetsNote": "GitHub public API; verify current rate limits.",
+      "demoSuggestion": "Analyse a repo chosen by a judge.",
+      "interests": [
+        "web",
+        "data"
+      ]
+    }
+  ]
+}

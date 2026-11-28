@@ -1,0 +1,22 @@
+import { useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { roadmaps } from '../lib/catalogue.js';
+import { useProgress } from '../lib/userProgress.js';
+import { dueCards, newCard, reviewCard } from '../lib/leitner.js';
+const KEY='roadmap-galaxy-memory-cards-v1';
+function read(){try{const x=JSON.parse(localStorage.getItem(KEY)||'{}');return x&&typeof x==='object'?x:{}}catch{return {}}}
+const todayKey=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+const topicIndex=new Map(roadmaps.flatMap(r=>r.topics.map(t=>[t.topicId,{...t,roadmap:r}])));
+export default function MemoryProbe(){
+ const {completed}=useProgress();const [cards,setCards]=useState(read);const [active,setActive]=useState(null);const [revealed,setRevealed]=useState(false);const today=todayKey();
+ useEffect(()=>{let changed=false;const next={...cards};completed.forEach(id=>{if(topicIndex.has(id)&&!next[id]){next[id]=newCard(id,today);changed=true}});if(changed){setCards(next);try{localStorage.setItem(KEY,JSON.stringify(next))}catch{/* storage unavailable */}}},[completed.join('|')]);
+ const due=useMemo(()=>dueCards(Object.entries(cards).map(([id,c])=>({...c,id})),today).filter(c=>topicIndex.has(c.id)),[cards,today]);
+ const current=active?due.find(c=>c.id===active):due[0];const mastered=Object.values(cards).filter(c=>c.box>=5).length;
+ function saveReview(correct){if(!current)return;const next={...cards,[current.id]:reviewCard(current,correct,today)};setCards(next);try{localStorage.setItem(KEY,JSON.stringify(next))}catch{/* storage unavailable */}setActive(null);setRevealed(false)}
+ const topic=current?topicIndex.get(current.id):null;
+ return <div className="max-w-4xl mx-auto"><span className="kicker">SPACED REPETITION · ACTIVE RECALL</span><h1 className="mt-2">Memory Probe</h1><p className="muted max-w-2xl">Strengthen recall by explaining completed topics from memory. Rate yourself honestly; correct answers move forward through the Leitner boxes, while a difficult recall returns to Box 1.</p>
+ <div className="dashboard-quick-stats mt-6"><div><span>Cards due today</span><strong>{due.length}</strong></div><div><span>Total review cards</span><strong>{Object.keys(cards).length}</strong></div><div><span>Box 5 cards</span><strong>{mastered}</strong></div></div>
+ {current&&topic?<section className="glass mt-6"><div className="flex flex-wrap justify-between gap-2"><span className="kicker">BOX {current.box} · DUE {current.dueOn}</span><span className="tag">{topic.roadmap.title}</span></div><h2 className="!mt-5">{topic.title}</h2><p className="muted">Without opening your notes, explain the concept in your own words. Include a definition, one example, and when you would use it.</p><div className="detail-tile mt-5"><b>Recall challenge</b><p className="muted mb-0">Can you explain <strong>{topic.title}</strong> clearly and solve a small example without looking it up?</p></div>{!revealed?<button className="btn btn-primary mt-5" onClick={()=>setRevealed(true)}>I've attempted the recall</button>:<div className="mt-5"><p className="muted">Be honest about how well you recalled it:</p><div className="flex flex-wrap gap-3"><button className="btn btn-primary" onClick={()=>saveReview(true)}>I recalled it well</button><button className="btn" onClick={()=>saveReview(false)}>I need to review it</button></div></div>}</section>:<section className="glass mt-6"><h2 className="!mt-0">{Object.keys(cards).length?'All caught up!':'No review cards yet'}</h2><p className="muted">{Object.keys(cards).length?'You have no due cards today. Come back when your next review is scheduled.':'Mark topics as Done in a roadmap and they will automatically appear here as recall cards.'}</p><Link className="btn btn-primary" to="/roadmaps">Explore your roadmaps</Link></section>}
+ <section className="dashboard-section"><h2>Review schedule</h2><p className="muted text-sm">Correct recall advances one box. Review intervals: 1, 2, 4, 7 and 14 days. An incorrect recall resets the card to Box 1, due tomorrow.</p><div className="grid grid-cols-5 gap-2">{[1,2,3,4,5].map(box=><div className="detail-tile text-center" key={box}><b>Box {box}</b><strong className="block text-2xl text-ice">{Object.values(cards).filter(c=>c.box===box).length}</strong></div>)}</div></section>
+ <p className="muted text-xs">Review cards and schedules are stored in this browser. This tool prompts active recall; it does not generate or grade written answers.</p></div>;
+}
